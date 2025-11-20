@@ -2,11 +2,26 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Inter, Poppins } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import { locales, type Locale } from '@/i18n';
+import './globals.css';
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.souljeep.com'),
@@ -68,14 +83,12 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+export default async function LocaleLayout(props: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const params = await props.params;
+  const locale = params.locale;
 
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as Locale)) {
@@ -83,17 +96,17 @@ export default async function LocaleLayout({
   }
 
   // Providing all messages to the client side is the easiest way to get started
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <html lang={locale}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <html lang={locale} className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
         <head>
           <StructuredData />
         </head>
-        <body>
+        <body className="antialiased">
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen">{props.children}</main>
           <Footer />
           <WhatsAppButton />
         </body>
