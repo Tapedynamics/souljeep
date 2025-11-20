@@ -1,9 +1,19 @@
+'use client';
+
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import { companyInfo } from '@/data/company';
+import type { Locale } from '@/i18n';
 
 export default function Footer() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
+  const tCompany = useTranslations('company');
+  const params = useParams();
+  const currentLocale = (params.locale as Locale) || 'en';
   return (
     <footer className="bg-stone-gray text-white">
       <Container>
@@ -14,37 +24,37 @@ export default function Footer() {
               <span className="text-sunset-orange">SOUL</span>
               <span className="text-white ml-1">JEEP</span>
             </h3>
-            <p className="text-sand-beige mb-4">{companyInfo.tagline}</p>
-            <p className="text-sm text-gray-300">{companyInfo.description}</p>
+            <p className="text-sand-beige mb-4">{tCompany('tagline')}</p>
+            <p className="text-sm text-gray-300">{tCompany('description')}</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold mb-4 text-lg">Quick Links</h4>
+            <h4 className="font-bold mb-4 text-lg">{t('quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/tours" className="text-sand-beige hover:text-sunset-orange transition-colors">
-                  Our Tours
+                <Link href={`/${currentLocale}/tours`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                  {t('ourTours')}
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-sand-beige hover:text-sunset-orange transition-colors">
-                  Gallery
+                <Link href={`/${currentLocale}/gallery`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                  {tNav('gallery')}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sand-beige hover:text-sunset-orange transition-colors">
-                  About Us
+                <Link href={`/${currentLocale}/about`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                  {tNav('about')}
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href={`/${currentLocale}/faq`} className="text-sand-beige hover:text-sunset-orange transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sand-beige hover:text-sunset-orange transition-colors">
-                  Contact
+                <Link href={`/${currentLocale}/contact`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                  {t('contact')}
                 </Link>
               </li>
             </ul>
@@ -90,7 +100,7 @@ export default function Footer() {
 
           {/* Social & Hours */}
           <div>
-            <h4 className="font-bold mb-4 text-lg">Follow Us</h4>
+            <h4 className="font-bold mb-4 text-lg">{t('followUs')}</h4>
             <div className="flex gap-4 mb-6">
               <a
                 href={companyInfo.social.instagram}
@@ -112,8 +122,8 @@ export default function Footer() {
               </a>
             </div>
             <div className="text-sm text-sand-beige">
-              <p className="font-semibold mb-2">Opening Hours</p>
-              <p>Monday - Sunday</p>
+              <p className="font-semibold mb-2">{t('openingHours')}</p>
+              <p>{t('mondayToSunday')}</p>
               <p>{companyInfo.hours.monday}</p>
             </div>
           </div>
@@ -121,9 +131,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 py-6 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} {companyInfo.name}. All rights reserved.</p>
+          <p>{t('copyright', { year: new Date().getFullYear(), companyName: tCompany('name') })}</p>
           <p className="mt-2">
-            Made with passion in Tenerife
+            {t('madeWith')}
           </p>
         </div>
       </Container>

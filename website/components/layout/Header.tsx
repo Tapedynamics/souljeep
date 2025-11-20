@@ -3,21 +3,37 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone } from 'lucide-react';
+import { useParams, usePathname } from 'next/navigation';
+import { Menu, X, Phone, Globe } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { companyInfo } from '@/data/company';
+import { locales, localeNames, type Locale } from '@/i18n';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+
+  const t = useTranslations('nav');
+  const params = useParams();
+  const pathname = usePathname();
+  const currentLocale = (params.locale as Locale) || 'en';
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/tours', label: 'Tours' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: `/${currentLocale}`, label: t('home') },
+    { href: `/${currentLocale}/tours`, label: t('tours') },
+    { href: `/${currentLocale}/gallery`, label: t('gallery') },
+    { href: `/${currentLocale}/about`, label: t('about') },
+    { href: `/${currentLocale}/contact`, label: t('contact') },
   ];
+
+  const switchLanguage = (newLocale: Locale) => {
+    const pathWithoutLocale = pathname.replace(`/${currentLocale}`, '');
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
+    window.location.href = newPath;
+    setIsLangMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
@@ -69,9 +85,39 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">{companyInfo.contact.phone}</span>
             </a>
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center gap-2 text-white hover:text-sunset-gold transition-colors drop-shadow-lg"
+                aria-label="Switch language"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium uppercase">{currentLocale}</span>
+              </button>
+              {isLangMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl py-2 z-50">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale}
+                      onClick={() => switchLanguage(locale)}
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+                        locale === currentLocale
+                          ? 'bg-sunset-orange text-white'
+                          : 'text-stone-gray hover:bg-sand-beige'
+                      }`}
+                    >
+                      {localeNames[locale]}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="md" className="shadow-2xl">
-                Book Now
+                {t('bookNow')}
               </Button>
             </Link>
           </div>
@@ -101,6 +147,33 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
+
+            {/* Mobile Language Switcher */}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-xs font-semibold text-stone-gray mb-2 flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                Language
+              </p>
+              <div className="grid grid-cols-3 gap-2">
+                {locales.map((locale) => (
+                  <button
+                    key={locale}
+                    onClick={() => {
+                      switchLanguage(locale);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`px-3 py-2 text-sm rounded-lg transition-colors ${
+                      locale === currentLocale
+                        ? 'bg-sunset-orange text-white'
+                        : 'bg-gray-100 text-stone-gray hover:bg-sand-beige'
+                    }`}
+                  >
+                    {localeNames[locale]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="mt-6 flex flex-col gap-3">
               <a
                 href={`tel:${companyInfo.contact.phone}`}
@@ -111,7 +184,7 @@ export default function Header() {
               </a>
               <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="md" className="w-full">
-                  Book Now
+                  {t('bookNow')}
                 </Button>
               </Link>
             </div>
