@@ -133,7 +133,7 @@ export default function HomePage() {
       </Section>
 
       {/* Stats Section */}
-      <Section background="ocean-blue" padding="lg" className="bg-ocean-blue text-white">
+      <Section padding="lg" className="bg-ocean-blue text-white">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <AnimatedSection animation="fadeUp" delay={0}>
             <div className="text-4xl md:text-5xl font-bold text-sunset-gold mb-2">500+</div>
