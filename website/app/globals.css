@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  /* Soul Jeep Brand Colors */
+  --sunset-orange: #ff6b35;
+  --sunset-gold: #f7931e;
+  --ocean-blue: #0084d6;
+  --ocean-deep: #005a8d;
+  --adventure-green: #2d9b4f;
+  --volcano-red: #dc2626;
+  --sand-beige: #f5f1e8;
+  --stone-gray: #4a5568;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Brand Colors */
+  --color-sunset-orange: var(--sunset-orange);
+  --color-sunset-gold: var(--sunset-gold);
+  --color-ocean-blue: var(--ocean-blue);
+  --color-ocean-deep: var(--ocean-deep);
+  --color-adventure-green: var(--adventure-green);
+  --color-volcano-red: var(--volcano-red);
+  --color-sand-beige: var(--sand-beige);
+  --color-stone-gray: var(--stone-gray);
+
+  /* Typography */
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Poppins', sans-serif;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
