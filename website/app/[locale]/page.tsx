@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Check, MapPin, Shield, Users, Star } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import TourCard from '@/components/tour/TourCard';
@@ -8,7 +9,9 @@ import AnimatedSection from '@/components/common/AnimatedSection';
 import { tours } from '@/data/tours';
 import { companyInfo } from '@/data/company';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const t = await getTranslations('home');
+  const tCommon = await getTranslations('common');
   const featuredTours = tours.filter(tour => tour.featured);
 
   // Hero video carousel slides
@@ -32,12 +35,11 @@ export default function HomePage() {
         <div className="flex items-center justify-center h-full">
           <div className="text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight">
-              Discover Tenerife<br />
-              <span className="text-sunset-gold">In Your Own Jeep</span>
+              {t('hero.title')}<br />
+              <span className="text-sunset-gold">{t('hero.highlightText')}</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-sand-beige max-w-3xl mx-auto leading-relaxed">
-              Drive your own Jeep Wrangler through volcanic landscapes, coastal cliffs, and mountain roads.
-              The adventure of a lifetime awaits.
+              {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -46,7 +48,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-sunset-orange hover:bg-sunset-gold text-white text-lg px-10 py-4 rounded-xl shadow-xl hover:shadow-sunset-orange/50 transition-all duration-300 hover:scale-105 group"
                 >
-                  Book Your Adventure
+                  {tCommon('bookYourAdventure')}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Button>
               </Link>
@@ -56,7 +58,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-stone-gray text-lg px-10 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Explore Tours
+                  {t('hero.cta')}
                 </Button>
               </Link>
             </div>
@@ -91,11 +93,10 @@ export default function HomePage() {
       <Section background="white" padding="xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Choose Your <span className="text-sunset-orange">Adventure</span>
+            {t('tours.title')}
           </h2>
           <p className="text-lg md:text-xl text-stone-gray max-w-3xl mx-auto leading-relaxed">
-            Three unforgettable experiences. One incredible island. Drive your own Jeep Wrangler
-            through Tenerife&apos;s most spectacular landscapes.
+            {t('tours.subtitle')}
           </p>
         </div>
 
