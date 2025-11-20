@@ -14,29 +14,14 @@ export default function HomePage() {
   // Hero video carousel slides
   const heroVideos = [
     {
-      src: '/videos/hero/soul-jeep-hero.mp4',
-      poster: '/videos/hero/soul-jeep-hero-poster.jpg',
-      alt: 'Soul Jeep Experience'
+      src: '/videos/hero/PCV_9108-compressed.mp4',
+      poster: '/videos/hero/PCV_9108-poster.jpg',
+      alt: 'Soul Jeep Adventure'
     },
     {
-      src: '/videos/hero/ready-for-adventure.mp4',
-      poster: '/videos/hero/ready-for-adventure-poster.jpg',
-      alt: 'Ready for Adventure'
-    },
-    {
-      src: '/videos/hero/teide-landscape.mp4',
-      poster: '/videos/hero/teide-landscape-poster.jpg',
-      alt: 'Teide Landscape'
-    },
-    {
-      src: '/videos/hero/dynamic-clip.mp4',
-      poster: '/videos/hero/dynamic-clip-poster.jpg',
-      alt: 'Dynamic Jeep Tour'
-    },
-    {
-      src: '/videos/hero/promo-highlight.mp4',
-      poster: '/videos/hero/promo-highlight-poster.jpg',
-      alt: 'Promo Highlight'
+      src: '/videos/hero/PCV_9810-compressed.mp4',
+      poster: '/videos/hero/PCV_9810-poster.jpg',
+      alt: 'Tenerife Jeep Experience'
     },
   ];
 
