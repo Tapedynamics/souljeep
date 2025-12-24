@@ -4,12 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
-import { Menu, X, Phone, Globe } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { companyInfo } from '@/data/company';
-import { locales, localeNames, type Locale } from '@/i18n';
+import { locales, localeNames, localeFlags, type Locale } from '@/i18n';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,28 +86,29 @@ export default function Header() {
               <span className="text-sm font-medium">{companyInfo.contact.phone}</span>
             </a>
 
-            {/* Language Switcher */}
+            {/* Language Switcher with Flags */}
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center gap-2 text-white hover:text-sunset-gold transition-colors drop-shadow-lg"
+                className="flex items-center gap-2 text-white hover:text-sunset-gold transition-colors drop-shadow-lg px-2 py-1 rounded-lg hover:bg-white/10"
                 aria-label="Switch language"
               >
-                <Globe className="w-4 h-4" />
+                <span className="text-xl">{localeFlags[currentLocale]}</span>
                 <span className="text-sm font-medium uppercase">{currentLocale}</span>
               </button>
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl py-2 z-50">
+                <div className="absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-xl py-2 z-50">
                   {locales.map((locale) => (
                     <button
                       key={locale}
                       onClick={() => switchLanguage(locale)}
-                      className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors flex items-center gap-3 ${
                         locale === currentLocale
                           ? 'bg-sunset-orange text-white'
                           : 'text-stone-gray hover:bg-sand-beige'
                       }`}
                     >
+                      <span className="text-lg">{localeFlags[locale]}</span>
                       {localeNames[locale]}
                     </button>
                   ))}
@@ -148,13 +149,12 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Mobile Language Switcher */}
+            {/* Mobile Language Switcher with Flags */}
             <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-xs font-semibold text-stone-gray mb-2 flex items-center gap-2">
-                <Globe className="w-4 h-4" />
+              <p className="text-xs font-semibold text-stone-gray mb-3">
                 Language
               </p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="flex flex-wrap gap-2">
                 {locales.map((locale) => (
                   <button
                     key={locale}
@@ -162,13 +162,14 @@ export default function Header() {
                       switchLanguage(locale);
                       setIsMenuOpen(false);
                     }}
-                    className={`px-3 py-2 text-sm rounded-lg transition-colors ${
+                    className={`flex items-center gap-2 px-3 py-2 text-sm rounded-lg transition-colors ${
                       locale === currentLocale
                         ? 'bg-sunset-orange text-white'
                         : 'bg-gray-100 text-stone-gray hover:bg-sand-beige'
                     }`}
                   >
-                    {localeNames[locale]}
+                    <span className="text-lg">{localeFlags[locale]}</span>
+                    <span className="uppercase text-xs font-medium">{locale}</span>
                   </button>
                 ))}
               </div>

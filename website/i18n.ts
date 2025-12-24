@@ -17,6 +17,15 @@ export const localeNames: Record<Locale, string> = {
   de: 'Deutsch',
 };
 
+// Locale flags (emoji)
+export const localeFlags: Record<Locale, string> = {
+  en: '🇬🇧',
+  it: '🇮🇹',
+  fr: '🇫🇷',
+  es: '🇪🇸',
+  de: '🇩🇪',
+};
+
 export default getRequestConfig(async ({ locale }) => {
   // Use default locale if none provided (for client-side requests)
   const resolvedLocale = locale || defaultLocale;
