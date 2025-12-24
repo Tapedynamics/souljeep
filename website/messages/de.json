@@ -30,7 +30,8 @@
       "title": "Entdecken Sie Teneriffa",
       "highlightText": "Im Eigenen Jeep",
       "subtitle": "Unvergessliche 4x4-Abenteuer Durch Vulkanlandschaften",
-      "cta": "Unsere Touren Entdecken"
+      "cta": "Unsere Touren Entdecken",
+      "premiumExperience": "Premium-Erlebnis"
     },
     "intro": {
       "title": "Ihr Abenteuer Wartet",
@@ -38,10 +39,20 @@
     },
     "tours": {
       "title": "Unsere Beliebtesten Touren",
-      "subtitle": "Wählen Sie Ihr Abenteuer"
+      "subtitle": "Wählen Sie Ihr Abenteuer",
+      "bookAdventureNow": "Buchen Sie Jetzt Ihr Abenteuer"
+    },
+    "stats": {
+      "adventurers": "Glückliche Abenteurer",
+      "routes": "Epische Routen",
+      "satisfaction": "Zufriedenheitsrate",
+      "rating": "Durchschnittsbewertung"
     },
     "whyChooseUs": {
       "title": "Warum Soul Jeep Experience Wählen",
+      "mainTitle": "Warum Wählen",
+      "highlight": "Soul Jeep",
+      "subtitle": "Wir sind nicht nur ein weiteres Tourunternehmen. Wir bieten Ihnen die Freiheit, in Ihrem eigenen Tempo in Ihrem eigenen Jeep Wrangler zu erkunden.",
       "reason1Title": "Erfahrene Lokale Guides",
       "reason1Description": "Unsere leidenschaftlichen Guides kennen jeden versteckten Winkel von Teneriffa",
       "reason2Title": "Authentische Abenteuer",
@@ -49,23 +60,58 @@
       "reason3Title": "Kleine Gruppen",
       "reason3Description": "Intime Erlebnisse mit persönlicher Betreuung",
       "reason4Title": "Sicherheit Zuerst",
-      "reason4Description": "Professionelle Ausrüstung und zertifizierte Guides"
+      "reason4Description": "Professionelle Ausrüstung und zertifizierte Guides",
+      "featureDescription": "Erleben Sie das Beste von Teneriffa mit unseren sorgfältig kuratierten Touren und Premium-Service."
+    },
+    "features": {
+      "feature1": "Fahren Sie Ihren Eigenen Jeep Wrangler",
+      "feature2": "Kleingruppenerlebnisse",
+      "feature3": "Professionelle Routenführung",
+      "feature4": "Vollständig Versicherte Fahrzeuge",
+      "feature5": "Erfrischungen Inklusive",
+      "feature6": "Flexible Buchung"
+    },
+    "howItWorks": {
+      "title": "Wie Es",
+      "highlight": "Funktioniert",
+      "subtitle": "Ihr Abenteuer ist nur vier einfache Schritte entfernt",
+      "step1Title": "Wählen Sie Ihre Tour",
+      "step1Description": "Wählen Sie aus unseren drei spektakulären Routen durch Teneriffa",
+      "step2Title": "Online Buchen",
+      "step2Description": "Reservieren Sie Ihren Jeep Wrangler mit sofortiger Bestätigung",
+      "step3Title": "Briefing Erhalten",
+      "step3Description": "Erhalten Sie Routenführung und Sicherheitsanweisungen von unserem Team",
+      "step4Title": "Auf die Straße!",
+      "step4Description": "Fahren Sie Ihren eigenen Jeep und erkunden Sie Teneriffa in Ihrem eigenen Tempo"
     },
     "cta": {
-      "title": "Bereit für Ihr Abenteuer?",
-      "subtitle": "Buchen Sie heute Ihr unvergessliches Teneriffa-Erlebnis",
+      "title": "Bereit für Ihr",
+      "highlight": "Abenteuer",
+      "subtitle": "Buchen Sie noch heute Ihr Jeep Wrangler-Erlebnis und schaffen Sie Erinnerungen, die ein Leben lang halten. Verfügbar 7 Tage die Woche ab {hours}.",
+      "bookNow": "Jetzt Buchen",
+      "callUs": "Rufen Sie Uns An: {phone}",
       "button": "Jetzt Buchen"
     }
   },
   "tours": {
     "pageTitle": "Unsere Touren",
-    "pageSubtitle": "Wählen Sie Ihr perfektes Abenteuer auf Teneriffa",
+    "pageSubtitle": "Fahren Sie Ihren eigenen Jeep Wrangler durch die spektakulärsten Landschaften Teneriffas. Wählen Sie aus unserer kuratierten Auswahl unvergesslicher Abenteuer.",
+    "heroTitle": "Unsere",
+    "heroHighlight": "Touren",
     "coastalTitle": "Küsten-Jeep-Safari",
     "coastalShortDescription": "Erkunden Sie die dramatische Südküste mit atemberaubenden Meerblicken und versteckten Stränden.",
     "teideTitle": "Teide-Nationalpark-Expedition",
     "teideShortDescription": "Reise durch Spaniens höchsten Gipfel und UNESCO-Welterbe-Vulkanlandschaften.",
     "sunsetTitle": "Sonnenuntergangs-Safari-Erlebnis",
-    "sunsetShortDescription": "Beobachten Sie den Sonnenuntergang über dem Atlantik von exklusiven Off-Road-Aussichtspunkten."
+    "sunsetShortDescription": "Beobachten Sie den Sonnenuntergang über dem Atlantik von exklusiven Off-Road-Aussichtspunkten.",
+    "teideSectionTitle": "Abenteuer",
+    "teideSectionHighlight": "Teide",
+    "teideSectionDescription": "Erleben Sie die Magie von Spaniens höchstem Gipfel. Fahren Sie durch vulkanische Landschaften und erleben Sie atemberaubende Sonnenuntergänge auf 2.000 Metern Höhe.",
+    "coastalSectionTitle": "Erkundungen",
+    "coastalSectionHighlight": "Küsten",
+    "coastalSectionDescription": "Entdecken Sie dramatische Klippen, versteckte Buchten und unberührte Strände entlang Teneriffas spektakulärer Küste. Schwimmen Sie in kristallklarem Wasser und genießen Sie die Sonne.",
+    "adventureBadge": "Abenteuer",
+    "peopleSuffix": "Personen"
   },
   "tourDetail": {
     "bookThisTour": "Diese Tour Buchen",

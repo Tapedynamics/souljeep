@@ -54,7 +54,7 @@ export default function HeroContent() {
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full">
             <Star className="w-5 h-5 text-sunset-gold" />
-            <span className="font-medium">Premium Experience</span>
+            <span className="font-medium">{t('hero.premiumExperience')}</span>
           </div>
         </div>
       </div>

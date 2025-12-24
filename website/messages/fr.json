@@ -30,7 +30,8 @@
       "title": "Découvrez Tenerife",
       "highlightText": "Dans Votre Propre Jeep",
       "subtitle": "Aventures 4x4 Inoubliables à Travers des Paysages Volcaniques",
-      "cta": "Explorez Nos Circuits"
+      "cta": "Explorez Nos Circuits",
+      "premiumExperience": "Expérience Premium"
     },
     "intro": {
       "title": "Votre Aventure Vous Attend",
@@ -38,10 +39,20 @@
     },
     "tours": {
       "title": "Nos Circuits Les Plus Populaires",
-      "subtitle": "Choisissez votre aventure"
+      "subtitle": "Choisissez votre aventure",
+      "bookAdventureNow": "Réservez Votre Aventure Maintenant"
+    },
+    "stats": {
+      "adventurers": "Aventuriers Heureux",
+      "routes": "Routes Épiques",
+      "satisfaction": "Taux de Satisfaction",
+      "rating": "Note Moyenne"
     },
     "whyChooseUs": {
       "title": "Pourquoi Choisir Soul Jeep Experience",
+      "mainTitle": "Pourquoi Choisir",
+      "highlight": "Soul Jeep",
+      "subtitle": "Nous ne sommes pas seulement une autre compagnie de tours. Nous vous offrons la liberté d'explorer à votre rythme dans votre propre Jeep Wrangler.",
       "reason1Title": "Guides Locaux Experts",
       "reason1Description": "Nos guides passionnés connaissent chaque recoin caché de Tenerife",
       "reason2Title": "Aventures Authentiques",
@@ -49,23 +60,58 @@
       "reason3Title": "Petits Groupes",
       "reason3Description": "Expériences intimes avec attention personnalisée",
       "reason4Title": "Sécurité d'Abord",
-      "reason4Description": "Équipement professionnel et guides certifiés"
+      "reason4Description": "Équipement professionnel et guides certifiés",
+      "featureDescription": "Découvrez le meilleur de Tenerife avec nos circuits soigneusement sélectionnés et notre service premium."
+    },
+    "features": {
+      "feature1": "Conduisez Votre Propre Jeep Wrangler",
+      "feature2": "Expériences en Petits Groupes",
+      "feature3": "Guidage Professionnel de l'Itinéraire",
+      "feature4": "Véhicules Entièrement Assurés",
+      "feature5": "Rafraîchissements Inclus",
+      "feature6": "Réservation Flexible"
+    },
+    "howItWorks": {
+      "title": "Comment Ça",
+      "highlight": "Fonctionne",
+      "subtitle": "Votre aventure n'est qu'à quatre étapes simples",
+      "step1Title": "Choisissez Votre Circuit",
+      "step1Description": "Sélectionnez parmi nos trois itinéraires spectaculaires à travers Tenerife",
+      "step2Title": "Réservez en Ligne",
+      "step2Description": "Réservez votre Jeep Wrangler avec confirmation instantanée",
+      "step3Title": "Recevez le Briefing",
+      "step3Description": "Recevez les indications d'itinéraire et les consignes de sécurité de notre équipe",
+      "step4Title": "En Route!",
+      "step4Description": "Conduisez votre propre Jeep et explorez Tenerife à votre rythme"
     },
     "cta": {
-      "title": "Prêt pour Votre Aventure?",
-      "subtitle": "Réservez votre expérience inoubliable à Tenerife aujourd'hui",
+      "title": "Prêt pour Votre",
+      "highlight": "Aventure",
+      "subtitle": "Réservez votre expérience Jeep Wrangler aujourd'hui et créez des souvenirs qui dureront toute une vie. Disponible 7 jours sur 7 à partir de {hours}.",
+      "bookNow": "Réserver Maintenant",
+      "callUs": "Appelez-Nous: {phone}",
       "button": "Réserver Maintenant"
     }
   },
   "tours": {
     "pageTitle": "Nos Circuits",
-    "pageSubtitle": "Choisissez votre aventure parfaite à Tenerife",
+    "pageSubtitle": "Conduisez votre propre Jeep Wrangler à travers les paysages les plus spectaculaires de Tenerife. Choisissez parmi notre sélection d'aventures inoubliables.",
+    "heroTitle": "Nos",
+    "heroHighlight": "Circuits",
     "coastalTitle": "Safari Jeep Côtier",
     "coastalShortDescription": "Explorez la côte sud spectaculaire avec des vues magnifiques sur l'océan et des plages cachées.",
     "teideTitle": "Expédition au Parc National du Teide",
     "teideShortDescription": "Voyage à travers le plus haut sommet d'Espagne et les paysages volcaniques classés au patrimoine de l'UNESCO.",
     "sunsetTitle": "Expérience Safari au Coucher de Soleil",
-    "sunsetShortDescription": "Admirez le soleil se coucher sur l'Atlantique depuis des points de vue exclusifs hors des sentiers battus."
+    "sunsetShortDescription": "Admirez le soleil se coucher sur l'Atlantique depuis des points de vue exclusifs hors des sentiers battus.",
+    "teideSectionTitle": "Aventures",
+    "teideSectionHighlight": "Teide",
+    "teideSectionDescription": "Vivez la magie du plus haut sommet d'Espagne. Conduisez à travers des paysages volcaniques et admirez des couchers de soleil à couper le souffle à 2 000 mètres d'altitude.",
+    "coastalSectionTitle": "Explorations",
+    "coastalSectionHighlight": "Côtières",
+    "coastalSectionDescription": "Découvrez des falaises spectaculaires, des criques cachées et des plages préservées le long de la côte spectaculaire de Tenerife. Nagez dans des eaux cristallines et profitez du soleil.",
+    "adventureBadge": "Aventure",
+    "peopleSuffix": "Personnes"
   },
   "tourDetail": {
     "bookThisTour": "Réserver Ce Circuit",

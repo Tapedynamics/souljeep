@@ -30,7 +30,8 @@
       "title": "Discover Tenerife",
       "highlightText": "In Your Own Jeep",
       "subtitle": "Unforgettable 4x4 Adventures Through Volcanic Landscapes",
-      "cta": "Explore Our Tours"
+      "cta": "Explore Our Tours",
+      "premiumExperience": "Premium Experience"
     },
     "intro": {
       "title": "Your Adventure Awaits",
@@ -38,10 +39,20 @@
     },
     "tours": {
       "title": "Our Most Popular Tours",
-      "subtitle": "Choose your adventure"
+      "subtitle": "Choose your adventure",
+      "bookAdventureNow": "Book Your Adventure Now"
+    },
+    "stats": {
+      "adventurers": "Happy Adventurers",
+      "routes": "Epic Routes",
+      "satisfaction": "Satisfaction Rate",
+      "rating": "Average Rating"
     },
     "whyChooseUs": {
       "title": "Why Choose Soul Jeep Experience",
+      "mainTitle": "Why Choose",
+      "highlight": "Soul Jeep",
+      "subtitle": "We're not just another tour company. We offer you the freedom to explore at your own pace in your own Jeep Wrangler.",
       "reason1Title": "Expert Local Guides",
       "reason1Description": "Our passionate guides know every hidden corner of Tenerife",
       "reason2Title": "Authentic Adventures",
@@ -49,23 +60,58 @@
       "reason3Title": "Small Groups",
       "reason3Description": "Intimate experiences with personalized attention",
       "reason4Title": "Safety First",
-      "reason4Description": "Professional equipment and certified guides"
+      "reason4Description": "Professional equipment and certified guides",
+      "featureDescription": "Experience the best of Tenerife with our carefully curated tours and premium service."
+    },
+    "features": {
+      "feature1": "Drive Your Own Jeep Wrangler",
+      "feature2": "Small Group Experiences",
+      "feature3": "Professional Route Guidance",
+      "feature4": "Fully Insured Vehicles",
+      "feature5": "Refreshments Included",
+      "feature6": "Flexible Booking"
+    },
+    "howItWorks": {
+      "title": "How It",
+      "highlight": "Works",
+      "subtitle": "Your adventure is just four simple steps away",
+      "step1Title": "Choose Your Tour",
+      "step1Description": "Select from our three spectacular routes through Tenerife",
+      "step2Title": "Book Online",
+      "step2Description": "Reserve your Jeep Wrangler with instant confirmation",
+      "step3Title": "Get Briefed",
+      "step3Description": "Receive route guidance and safety instructions from our team",
+      "step4Title": "Hit the Road!",
+      "step4Description": "Drive your own Jeep and explore Tenerife at your own pace"
     },
     "cta": {
-      "title": "Ready for Your Adventure?",
-      "subtitle": "Book your unforgettable Tenerife experience today",
+      "title": "Ready for Your",
+      "highlight": "Adventure",
+      "subtitle": "Book your Jeep Wrangler experience today and create memories that will last a lifetime. Available 7 days a week from {hours}.",
+      "bookNow": "Book Now",
+      "callUs": "Call Us: {phone}",
       "button": "Book Now"
     }
   },
   "tours": {
     "pageTitle": "Our Tours",
-    "pageSubtitle": "Choose your perfect adventure in Tenerife",
+    "pageSubtitle": "Drive your own Jeep Wrangler through Tenerife's most spectacular landscapes. Choose from our curated selection of unforgettable adventures.",
+    "heroTitle": "Our",
+    "heroHighlight": "Tours",
     "coastalTitle": "Coastal Jeep Safari",
     "coastalShortDescription": "Explore the dramatic southern coastline with stunning ocean views and hidden beaches.",
     "teideTitle": "Teide National Park Expedition",
     "teideShortDescription": "Journey through Spain's highest peak and UNESCO World Heritage volcanic landscapes.",
     "sunsetTitle": "Sunset Safari Experience",
-    "sunsetShortDescription": "Watch the sun set over the Atlantic from exclusive off-road viewpoints."
+    "sunsetShortDescription": "Watch the sun set over the Atlantic from exclusive off-road viewpoints.",
+    "teideSectionTitle": "Teide",
+    "teideSectionHighlight": "Adventures",
+    "teideSectionDescription": "Experience the magic of Spain's highest peak. Drive through volcanic landscapes and witness breathtaking sunsets from 2,000 meters altitude.",
+    "coastalSectionTitle": "Coastal",
+    "coastalSectionHighlight": "Explorations",
+    "coastalSectionDescription": "Discover dramatic cliffs, hidden coves, and pristine beaches along Tenerife's spectacular coastline. Swim in crystal-clear waters and soak up the sun.",
+    "adventureBadge": "Adventure",
+    "peopleSuffix": "People"
   },
   "tourDetail": {
     "bookThisTour": "Book This Tour",

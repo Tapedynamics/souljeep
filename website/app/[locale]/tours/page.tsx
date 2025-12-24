@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 import { tours } from '@/data/tours';
 import { companyInfo } from '@/data/company';
 import TourCard from '@/components/tour/TourCard';
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ToursPage() {
+export default async function ToursPage() {
+  const t = await getTranslations('tours');
+  const tCommon = await getTranslations('common');
   const teideTours = tours.filter(tour => tour.category === 'teide');
   const coastalTours = tours.filter(tour => tour.category === 'coastal');
   const adventureTours = tours.filter(tour => tour.category === 'adventure');
@@ -43,11 +46,10 @@ export default function ToursPage() {
         <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Our <span className="text-sunset-gold">Tours</span>
+              {t('heroTitle')} <span className="text-sunset-gold">{t('heroHighlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8">
-              Drive your own Jeep Wrangler through Tenerife&apos;s most spectacular landscapes.
-              Choose from our curated selection of unforgettable adventures.
+              {t('pageSubtitle')}
             </p>
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
               <Button
@@ -55,7 +57,7 @@ export default function ToursPage() {
                 size="lg"
                 className="bg-sunset-orange hover:bg-sunset-gold text-white shadow-2xl hover:shadow-sunset-orange/50 transition-all duration-300 hover:scale-105 group"
               >
-                Book Your Adventure
+                {tCommon('bookYourAdventure')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -68,11 +70,10 @@ export default function ToursPage() {
         <Section background="white" padding="xl">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-volcano-red">Teide</span> Adventures
+              <span className="text-volcano-red">{t('teideSectionTitle')}</span> {t('teideSectionHighlight')}
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl">
-              Experience the magic of Spain&apos;s highest peak. Drive through volcanic landscapes
-              and witness breathtaking sunsets from 2,000 meters altitude.
+              {t('teideSectionDescription')}
             </p>
           </div>
 
@@ -89,11 +90,10 @@ export default function ToursPage() {
         <Section background="sand" padding="xl">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-ocean-blue">Coastal</span> Explorations
+              <span className="text-ocean-blue">{t('coastalSectionTitle')}</span> {t('coastalSectionHighlight')}
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl">
-              Discover dramatic cliffs, hidden coves, and pristine beaches along Tenerife&apos;s
-              spectacular coastline. Swim in crystal-clear waters and soak up the sun.
+              {t('coastalSectionDescription')}
             </p>
           </div>
 
