@@ -4,10 +4,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import GoogleTranslate from '@/components/common/GoogleTranslate';
 import { companyInfo } from '@/data/company';
 import { type Locale } from '@/i18n';
 
@@ -70,6 +71,12 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Google Translate */}
+            <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1">
+              <Globe className="w-4 h-4 text-white" />
+              <GoogleTranslate />
+            </div>
+
             <a
               href={companyInfo.contact.whatsappLink}
               target="_blank"
@@ -114,6 +121,12 @@ export default function Header() {
             </nav>
 
             <div className="mt-6 flex flex-col gap-3">
+              {/* Google Translate Mobile */}
+              <div className="flex items-center justify-center gap-2 py-2 bg-sand-beige rounded-lg">
+                <Globe className="w-4 h-4 text-stone-gray" />
+                <GoogleTranslate />
+              </div>
+
               <a
                 href={companyInfo.contact.whatsappLink}
                 target="_blank"
