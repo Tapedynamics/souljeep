@@ -7,11 +7,11 @@ import DynamicHero from '@/components/common/DynamicHero';
 import { companyInfo } from '@/data/company';
 
 export const metadata: Metadata = {
-  title: 'About Us | Soul Jeep Experience - Premium Jeep Tours in Tenerife',
-  description: 'Learn about Soul Jeep Experience, your trusted partner for unforgettable Jeep Wrangler adventures across Tenerife. Discover our story, mission, and commitment to excellence.',
+  title: 'Nosotros | Soul Jeep Experience - Tours en Jeep en Tenerife',
+  description: 'Conoce Soul Jeep Experience, tu socio de confianza para aventuras inolvidables en Jeep Wrangler por Tenerife. Descubre nuestra historia, misión y compromiso con la excelencia.',
   openGraph: {
-    title: 'About Soul Jeep Experience',
-    description: 'Premium Jeep Wrangler tours in Tenerife. Discover our story and commitment to unforgettable adventures.',
+    title: 'Sobre Soul Jeep Experience',
+    description: 'Tours premium en Jeep Wrangler en Tenerife. Descubre nuestra historia y compromiso con aventuras inolvidables.',
     url: 'https://www.souljeep.com/about',
   },
 };
@@ -20,58 +20,58 @@ export default function AboutPage() {
   const values = [
     {
       icon: Heart,
-      title: 'Passion for Adventure',
-      description: 'We live and breathe adventure. Every tour is designed to ignite your spirit of exploration and create unforgettable memories.'
+      title: 'Pasión por la Aventura',
+      description: 'Vivimos y respiramos aventura. Cada tour está diseñado para encender tu espíritu de exploración y crear recuerdos inolvidables.'
     },
     {
       icon: Shield,
-      title: 'Safety First',
-      description: 'Your safety is our top priority. All vehicles are fully insured, regularly maintained, and equipped with modern safety features.'
+      title: 'Seguridad Primero',
+      description: 'Tu seguridad es nuestra prioridad. Todos los vehículos están completamente asegurados, mantenidos regularmente y equipados con características de seguridad modernas.'
     },
     {
       icon: Users,
-      title: 'Small Group Experience',
-      description: 'We keep our groups intimate to ensure personalized attention and a more meaningful connection with the landscape.'
+      title: 'Experiencia en Grupos Pequeños',
+      description: 'Mantenemos grupos pequeños para asegurar atención personalizada y una conexión más significativa con el paisaje.'
     },
     {
       icon: Award,
-      title: 'Excellence in Service',
-      description: 'From the moment you book to the end of your tour, we strive to exceed expectations at every touchpoint.'
+      title: 'Excelencia en el Servicio',
+      description: 'Desde el momento de la reserva hasta el final del tour, nos esforzamos por superar las expectativas en cada momento.'
     },
     {
       icon: Target,
-      title: 'Authentic Experiences',
-      description: 'We take you off the beaten path to discover the real Tenerife, away from tourist crowds and into nature\'s embrace.'
+      title: 'Experiencias Auténticas',
+      description: 'Te llevamos fuera de los caminos trillados para descubrir el verdadero Tenerife, lejos de las multitudes turísticas y en contacto con la naturaleza.'
     },
     {
       icon: Compass,
-      title: 'Expert Guidance',
-      description: 'Our professional route guidance ensures you navigate safely while discovering hidden gems and breathtaking viewpoints.'
+      title: 'Guía Experta',
+      description: 'Nuestra guía profesional de rutas asegura que navegues de forma segura mientras descubres joyas ocultas y miradores impresionantes.'
     }
   ];
 
   const floatingCards = [
     {
       icon: <Shield className="w-6 h-6" />,
-      text: "100% Safe & Insured",
+      text: "100% Seguro y Asegurado",
       position: { top: "20%", left: "10%" },
       delay: 0.2
     },
     {
       icon: <Award className="w-6 h-6" />,
-      text: "Excellence in Service",
+      text: "Excelencia en Servicio",
       position: { top: "30%", right: "15%" },
       delay: 0.4
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      text: "Passion for Adventure",
+      text: "Pasión por la Aventura",
       position: { bottom: "25%", left: "12%" },
       delay: 0.6
     },
     {
       icon: <Target className="w-6 h-6" />,
-      text: "Authentic Experiences",
+      text: "Experiencias Auténticas",
       position: { bottom: "35%", right: "10%" },
       delay: 0.8
     },
@@ -81,9 +81,9 @@ export default function AboutPage() {
     <>
       {/* Dynamic Hero Section */}
       <DynamicHero
-        title="About "
-        highlightText="Soul Jeep"
-        subtitle={companyInfo.tagline}
+        title="Sobre "
+        highlightText="Nosotros"
+        subtitle="Descubre Tenerife con estilo"
         floatingCards={floatingCards}
         height="h-[55vh]"
         backgroundImage="/images/hero/teide-sunset-hero.jpg"
@@ -94,29 +94,29 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Our <span className="text-sunset-orange">Story</span>
+              Nuestra <span className="text-sunset-orange">Historia</span>
             </h2>
           </div>
 
           <div className="prose prose-lg max-w-none text-stone-gray space-y-6">
             <p className="text-xl leading-relaxed">
-              Soul Jeep Experience was born from a simple passion: to share the raw beauty
-              of Tenerife in the most exhilarating way possible. We believe that the best
-              way to discover an island is behind the wheel of your own vehicle, free to
-              explore at your own pace.
+              Soul Jeep Experience nació de una simple pasión: compartir la belleza salvaje
+              de Tenerife de la manera más emocionante posible. Creemos que la mejor
+              forma de descubrir una isla es al volante de tu propio vehículo, libre para
+              explorar a tu ritmo.
             </p>
             <p className="text-lg leading-relaxed">
-              Based in the heart of Costa Adeje, we&apos;ve spent years perfecting our routes,
-              discovering hidden viewpoints, and creating experiences that go beyond typical
-              sightseeing tours. Every winding mountain road, every volcanic vista, and every
-              coastal cliff has been carefully selected to showcase Tenerife&apos;s most spectacular
-              landscapes.
+              Con sede en el corazón de Costa Adeje, hemos pasado años perfeccionando nuestras rutas,
+              descubriendo miradores ocultos y creando experiencias que van más allá de los típicos
+              tours turísticos. Cada carretera de montaña serpenteante, cada vista volcánica y cada
+              acantilado costero ha sido cuidadosamente seleccionado para mostrar los paisajes más
+              espectaculares de Tenerife.
             </p>
             <p className="text-lg leading-relaxed">
-              What sets us apart is our commitment to giving you freedom. You&apos;re not just
-              a passenger on our tours—you&apos;re the driver of your own adventure. With
-              professional route guidance and top-of-the-line Jeep Wranglers, you&apos;ll have
-              the confidence to explore while creating your own unique story.
+              Lo que nos diferencia es nuestro compromiso de darte libertad. No eres solo
+              un pasajero en nuestros tours—eres el conductor de tu propia aventura. Con
+              guía profesional de rutas y Jeep Wranglers de primera línea, tendrás
+              la confianza para explorar mientras creas tu propia historia única.
             </p>
           </div>
         </div>
@@ -126,17 +126,17 @@ export default function AboutPage() {
       <Section background="sand" padding="xl">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Our <span className="text-ocean-blue">Mission</span>
+            Nuestra <span className="text-ocean-blue">Misión</span>
           </h2>
           <p className="text-xl text-stone-gray leading-relaxed mb-8">
-            To provide unforgettable, safe, and authentic Jeep experiences that allow travelers
-            to discover the soul of Tenerife. We combine the thrill of self-drive adventure with
-            expert guidance, creating memories that last a lifetime while maintaining the highest
-            standards of safety and service.
+            Proporcionar experiencias inolvidables, seguras y auténticas en Jeep que permitan a los viajeros
+            descubrir el alma de Tenerife. Combinamos la emoción de la aventura autoconducida con
+            guía experta, creando recuerdos que duran toda la vida mientras mantenemos los más altos
+            estándares de seguridad y servicio.
           </p>
           <div className="inline-block bg-sunset-orange/10 border-l-4 border-sunset-orange px-6 py-4 rounded-r-lg">
             <p className="text-lg font-medium text-stone-gray italic">
-              &quot;We don&apos;t just show you Tenerife—we let you experience its soul.&quot;
+              &quot;No solo te mostramos Tenerife—te dejamos experimentar su alma.&quot;
             </p>
           </div>
         </div>
@@ -146,11 +146,11 @@ export default function AboutPage() {
       <Section background="white" padding="xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="text-sunset-orange">Soul Jeep</span>
+            ¿Por Qué Elegir <span className="text-sunset-orange">Soul Jeep</span>?
           </h2>
           <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-            We&apos;re committed to delivering exceptional experiences that combine adventure,
-            safety, and authentic exploration.
+            Estamos comprometidos a ofrecer experiencias excepcionales que combinan aventura,
+            seguridad y exploración auténtica.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">{feature}</h3>
               <p className="text-stone-gray">
-                Experience premium service and attention to detail at every stage of your journey.
+                Experimenta un servicio premium y atención al detalle en cada etapa de tu viaje.
               </p>
             </div>
           ))}
@@ -176,10 +176,10 @@ export default function AboutPage() {
       <Section background="gradient" padding="xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Our <span className="text-ocean-blue">Values</span>
+            Nuestros <span className="text-ocean-blue">Valores</span>
           </h2>
           <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-            The principles that guide everything we do
+            Los principios que guían todo lo que hacemos
           </p>
         </div>
 
@@ -204,22 +204,22 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Team Section - Placeholder */}
+      {/* Team Section */}
       <Section background="white" padding="xl">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Meet Our <span className="text-sunset-orange">Team</span>
+            Conoce Nuestro <span className="text-sunset-orange">Equipo</span>
           </h2>
           <p className="text-xl text-stone-gray mb-8">
-            Our passionate team of adventure enthusiasts and local experts are dedicated
-            to making your Tenerife experience unforgettable. With deep knowledge of the
-            island and a commitment to exceptional service, we&apos;re here to guide you on
-            the journey of a lifetime.
+            Nuestro apasionado equipo de entusiastas de la aventura y expertos locales está dedicado
+            a hacer que tu experiencia en Tenerife sea inolvidable. Con profundo conocimiento de la
+            isla y un compromiso con el servicio excepcional, estamos aquí para guiarte en
+            el viaje de tu vida.
           </p>
           <div className="inline-flex items-center gap-2 bg-sand-beige rounded-lg px-6 py-3">
             <Users className="w-5 h-5 text-sunset-orange" />
             <span className="font-medium text-stone-gray">
-              Experienced guides | Local expertise | Passionate about adventure
+              Guías experimentados | Experiencia local | Apasionados por la aventura
             </span>
           </div>
         </div>
@@ -229,7 +229,7 @@ export default function AboutPage() {
       <Section background="sand" padding="lg">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            Licensed &amp; <span className="text-ocean-blue">Certified</span>
+            Licenciados y <span className="text-ocean-blue">Certificados</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {companyInfo.certifications.map((cert, index) => (
@@ -249,23 +249,23 @@ export default function AboutPage() {
       <Section background="gradient" padding="xl">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Ready to <span className="text-sunset-orange">Experience</span> the Difference?
+            ¿Listo para <span className="text-sunset-orange">Experimentar</span> la Diferencia?
           </h2>
           <p className="text-xl text-stone-gray mb-8">
-            Join us for an unforgettable Jeep adventure through Tenerife&apos;s most spectacular landscapes.
-            Book your tour today and discover why travelers choose Soul Jeep Experience.
+            Únete a nosotros para una aventura inolvidable en Jeep por los paisajes más espectaculares de Tenerife.
+            Reserva tu tour hoy y descubre por qué los viajeros eligen Soul Jeep Experience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg" className="group">
-                Book Your Adventure
+                Reserva Tu Aventura
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/tours">
               <Button variant="outline" size="lg">
-                Explore Tours
+                Explorar Tours
               </Button>
             </Link>
           </div>

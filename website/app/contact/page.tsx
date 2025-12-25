@@ -39,32 +39,32 @@ export default function ContactPage() {
 
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'El nombre es obligatorio';
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
+      newErrors.name = 'El nombre debe tener al menos 2 caracteres';
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'El email es obligatorio';
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Por favor, introduce un email válido';
     }
 
     // Phone validation (optional but if provided, must be valid)
     if (formData.phone && formData.phone.trim().length > 0) {
       const phoneRegex = /^[+]?[\d\s\-()]{8,}$/;
       if (!phoneRegex.test(formData.phone)) {
-        newErrors.phone = 'Please enter a valid phone number';
+        newErrors.phone = 'Por favor, introduce un teléfono válido';
       }
     }
 
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'El mensaje es obligatorio';
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = 'El mensaje debe tener al menos 10 caracteres';
     }
 
     setErrors(newErrors);
@@ -112,32 +112,32 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Visit Us',
+      title: 'Visítanos',
       content: `${companyInfo.location.address}, ${companyInfo.location.addressLine2}`,
       subContent: `${companyInfo.location.city}, ${companyInfo.location.postalCode}`,
       link: `https://www.google.com/maps?q=${companyInfo.location.coordinates.lat},${companyInfo.location.coordinates.lng}`,
-      linkText: 'Get Directions'
+      linkText: 'Cómo Llegar'
     },
     {
       icon: Phone,
-      title: 'Call Us',
+      title: 'Llámanos',
       content: companyInfo.contact.phone,
-      subContent: `Available ${companyInfo.contact.phoneHours}`,
+      subContent: `Disponible ${companyInfo.contact.phoneHours}`,
       link: `tel:${companyInfo.contact.phone}`,
-      linkText: 'Call Now'
+      linkText: 'Llamar Ahora'
     },
     {
       icon: Mail,
-      title: 'Email Us',
+      title: 'Escríbenos',
       content: companyInfo.contact.email,
-      subContent: 'We reply within 24 hours',
+      subContent: 'Respondemos en 24 horas',
       link: `mailto:${companyInfo.contact.email}`,
-      linkText: 'Send Email'
+      linkText: 'Enviar Email'
     },
     {
       icon: Clock,
-      title: 'Opening Hours',
-      content: 'Open Daily',
+      title: 'Horario',
+      content: 'Abierto Todos los Días',
       subContent: companyInfo.hours.monday,
       link: null,
       linkText: null
@@ -159,13 +159,13 @@ export default function ContactPage() {
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      text: "Open Daily 9:00 - 22:00",
+      text: "Abierto 9:00 - 22:00",
       position: { bottom: "22%", left: "8%" },
       delay: 0.6
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      text: "Quick Response",
+      text: "Respuesta Rápida",
       position: { bottom: "32%", right: "10%" },
       delay: 0.8
     },
@@ -175,9 +175,9 @@ export default function ContactPage() {
     <>
       {/* Dynamic Hero Section */}
       <DynamicHero
-        title="Get in "
-        highlightText="Touch"
-        subtitle="Have questions? We're here to help plan your perfect Tenerife adventure"
+        title="Ponte en "
+        highlightText="Contacto"
+        subtitle="¿Tienes preguntas? Estamos aquí para ayudarte a planificar tu aventura perfecta en Tenerife"
         floatingCards={floatingCards}
         height="h-[45vh]"
         backgroundImage="/images/hero/coastal-jeep-hero.jpg"
@@ -221,17 +221,17 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h2 className="text-3xl font-bold mb-2">Send us a Message</h2>
+            <h2 className="text-3xl font-bold mb-2">Envíanos un Mensaje</h2>
             <p className="text-stone-gray mb-6">
-              Fill out the form below and we&apos;ll get back to you as soon as possible
+              Completa el formulario y te responderemos lo antes posible
             </p>
 
             {submitSuccess && (
               <div className="mb-6 bg-adventure-green/10 border border-adventure-green rounded-lg p-4 flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-adventure-green flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-adventure-green">Message sent successfully!</p>
-                  <p className="text-sm text-stone-gray mt-1">We&apos;ll get back to you within 24 hours.</p>
+                  <p className="font-semibold text-adventure-green">¡Mensaje enviado correctamente!</p>
+                  <p className="text-sm text-stone-gray mt-1">Te responderemos en menos de 24 horas.</p>
                 </div>
               </div>
             )}
@@ -240,7 +240,7 @@ export default function ContactPage() {
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                  Full Name <span className="text-volcano-red">*</span>
+                  Nombre Completo <span className="text-volcano-red">*</span>
                 </label>
                 <input
                   type="text"
@@ -251,7 +251,7 @@ export default function ContactPage() {
                   className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange/50 transition-colors ${
                     errors.name ? 'border-volcano-red' : 'border-stone-gray/20'
                   }`}
-                  placeholder="John Doe"
+                  placeholder="Tu nombre"
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? 'name-error' : undefined}
                 />
@@ -265,7 +265,7 @@ export default function ContactPage() {
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Email Address <span className="text-volcano-red">*</span>
+                  Correo Electrónico <span className="text-volcano-red">*</span>
                 </label>
                 <input
                   type="email"
@@ -276,7 +276,7 @@ export default function ContactPage() {
                   className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange/50 transition-colors ${
                     errors.email ? 'border-volcano-red' : 'border-stone-gray/20'
                   }`}
-                  placeholder="john@example.com"
+                  placeholder="tu@email.com"
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'email-error' : undefined}
                 />
@@ -290,7 +290,7 @@ export default function ContactPage() {
               {/* Phone Field */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-                  Phone Number <span className="text-stone-gray/60 text-xs">(Optional)</span>
+                  Teléfono <span className="text-stone-gray/60 text-xs">(Opcional)</span>
                 </label>
                 <input
                   type="tel"
@@ -315,7 +315,7 @@ export default function ContactPage() {
               {/* Message Field */}
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                  Message <span className="text-volcano-red">*</span>
+                  Mensaje <span className="text-volcano-red">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -326,7 +326,7 @@ export default function ContactPage() {
                   className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange/50 transition-colors resize-none ${
                     errors.message ? 'border-volcano-red' : 'border-stone-gray/20'
                   }`}
-                  placeholder="Tell us about your adventure plans or ask any questions..."
+                  placeholder="Cuéntanos sobre tus planes de aventura o haznos tus preguntas..."
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? 'message-error' : undefined}
                 />
@@ -346,10 +346,10 @@ export default function ContactPage() {
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  'Sending...'
+                  'Enviando...'
                 ) : (
                   <>
-                    Send Message
+                    Enviar Mensaje
                     <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
@@ -375,9 +375,9 @@ export default function ContactPage() {
 
             {/* Social Media Links */}
             <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">Follow Our Adventures</h3>
+              <h3 className="text-2xl font-bold mb-4">Sigue Nuestras Aventuras</h3>
               <p className="text-stone-gray mb-6">
-                Stay connected with us on social media for the latest tours, tips, and stunning photos from Tenerife
+                Síguenos en redes sociales para ver los últimos tours, consejos y fotos espectaculares de Tenerife
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <Link
@@ -427,19 +427,19 @@ export default function ContactPage() {
 
             {/* Quick Links */}
             <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
+              <h3 className="text-2xl font-bold mb-4">Enlaces Rápidos</h3>
               <div className="space-y-3">
                 <Link
                   href="/faq"
                   className="block text-sunset-orange hover:text-sunset-gold font-medium transition-colors"
                 >
-                  Frequently Asked Questions
+                  Preguntas Frecuentes
                 </Link>
                 <Link
                   href="/tours"
                   className="block text-sunset-orange hover:text-sunset-gold font-medium transition-colors"
                 >
-                  Browse All Tours
+                  Ver Todos los Tours
                 </Link>
                 <Link
                   href={companyInfo.fareharbor.bookingUrl}
@@ -447,7 +447,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="block text-sunset-orange hover:text-sunset-gold font-medium transition-colors"
                 >
-                  Book Online Now
+                  Reservar Online
                 </Link>
               </div>
             </div>
@@ -459,10 +459,10 @@ export default function ContactPage() {
       <Section background="sand" padding="lg">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Prefer to Chat on <span className="text-adventure-green">WhatsApp</span>?
+            ¿Prefieres Chatear por <span className="text-adventure-green">WhatsApp</span>?
           </h2>
           <p className="text-lg text-stone-gray mb-6">
-            Get instant answers to your questions and book your tour directly through WhatsApp
+            Obtén respuestas instantáneas a tus preguntas y reserva tu tour directamente por WhatsApp
           </p>
           <Link
             href={companyInfo.contact.whatsappLink}
@@ -470,7 +470,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
           >
             <Button variant="secondary" size="lg" className="bg-adventure-green hover:bg-adventure-green/90">
-              Message us on WhatsApp
+              Escríbenos por WhatsApp
             </Button>
           </Link>
         </div>

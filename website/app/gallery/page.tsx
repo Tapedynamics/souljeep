@@ -127,25 +127,25 @@ export default function GalleryPage() {
   const floatingCards = [
     {
       icon: <Camera className="w-6 h-6" />,
-      text: `${allImages.length}+ Photos`,
+      text: `${allImages.length}+ Fotos`,
       position: { top: "20%", left: "12%" },
       delay: 0.2
     },
     {
       icon: <Mountain className="w-6 h-6" />,
-      text: "Volcanic Landscapes",
+      text: "Paisajes Volcánicos",
       position: { top: "25%", right: "10%" },
       delay: 0.4
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
-      text: "Stunning Moments",
+      text: "Momentos Únicos",
       position: { bottom: "25%", left: "10%" },
       delay: 0.6
     },
     {
       icon: <ImageIcon className="w-6 h-6" />,
-      text: "Professional Shots",
+      text: "Fotos Profesionales",
       position: { bottom: "30%", right: "14%" },
       delay: 0.8
     },
@@ -155,9 +155,9 @@ export default function GalleryPage() {
     <>
       {/* Dynamic Hero Section */}
       <DynamicHero
-        title="Photo "
-        highlightText="Gallery"
-        subtitle="Explore stunning moments from our Jeep adventures across Tenerife's most spectacular landscapes"
+        title="Nuestra "
+        highlightText="Galería"
+        subtitle="Explora momentos increíbles de nuestras aventuras en Jeep por los paisajes más espectaculares de Tenerife"
         floatingCards={floatingCards}
         height="h-[45vh]"
         backgroundImage="/images/hero/gallery-hero.jpg"
@@ -169,7 +169,7 @@ export default function GalleryPage() {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <div className="flex items-center gap-2 text-stone-gray">
             <Filter className="w-5 h-5" />
-            <span className="font-medium">Filter by:</span>
+            <span className="font-medium">Filtrar por:</span>
           </div>
           <Button
             variant={selectedCategory === 'all' ? 'primary' : 'outline'}
@@ -177,7 +177,7 @@ export default function GalleryPage() {
             onClick={() => setSelectedCategory('all')}
             aria-pressed={selectedCategory === 'all'}
           >
-            All Tours
+            Todos los Tours
           </Button>
           <Button
             variant={selectedCategory === 'teide' ? 'primary' : 'outline'}
@@ -185,7 +185,7 @@ export default function GalleryPage() {
             onClick={() => setSelectedCategory('teide')}
             aria-pressed={selectedCategory === 'teide'}
           >
-            Teide Tours
+            Tours Teide
           </Button>
           <Button
             variant={selectedCategory === 'coastal' ? 'primary' : 'outline'}
@@ -193,7 +193,7 @@ export default function GalleryPage() {
             onClick={() => setSelectedCategory('coastal')}
             aria-pressed={selectedCategory === 'coastal'}
           >
-            Coastal Tours
+            Tours Costa
           </Button>
         </div>
 
@@ -234,7 +234,7 @@ export default function GalleryPage() {
 
         {filteredImages.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-xl text-stone-gray">No images found for this category</p>
+            <p className="text-xl text-stone-gray">No hay imágenes para esta categoría</p>
           </div>
         )}
       </Section>
