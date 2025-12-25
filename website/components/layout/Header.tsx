@@ -32,13 +32,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group relative">
-            <div className="bg-white rounded-xl px-4 py-3 shadow-lg">
+            <div className="bg-white rounded-xl px-2 py-1 shadow-lg">
               <Image
                 src="/images/logo.png"
                 alt="Soul Jeep Experience"
-                width={220}
-                height={70}
-                className="h-16 md:h-20 w-auto object-contain"
+                width={280}
+                height={80}
+                className="h-14 md:h-16 w-auto object-contain"
                 priority
                 onError={(e) => {
                   // Fallback to text logo if image doesn't exist
