@@ -3,21 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import LanguageFlags from '@/components/common/LanguageFlags';
 import { companyInfo } from '@/data/company';
-import { type Locale } from '@/i18n';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const t = useTranslations('nav');
-  const params = useParams();
-  const currentLocale = (params.locale as Locale) || 'es';
 
   const navLinks = [
     { href: '/', label: t('home') },
@@ -42,7 +36,6 @@ export default function Header() {
                 className="h-14 md:h-16 w-auto object-contain"
                 priority
                 onError={(e) => {
-                  // Fallback to text logo if image doesn't exist
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
                   const fallback = target.nextElementSibling as HTMLElement;
@@ -71,9 +64,6 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Language Flags */}
-            <LanguageFlags variant="light" />
-
             <a
               href={companyInfo.contact.whatsappLink}
               target="_blank"
@@ -118,11 +108,6 @@ export default function Header() {
             </nav>
 
             <div className="mt-6 flex flex-col gap-3">
-              {/* Language Flags Mobile */}
-              <div className="flex items-center justify-center gap-2 py-2 bg-sand-beige rounded-lg">
-                <LanguageFlags variant="dark" />
-              </div>
-
               <a
                 href={companyInfo.contact.whatsappLink}
                 target="_blank"
