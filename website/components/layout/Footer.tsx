@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold mb-4 text-lg">Contact</h4>
+            <h4 className="font-bold mb-4 text-lg">{t('contact')}</h4>
             <ul className="space-y-3">
               <li>
                 <a
