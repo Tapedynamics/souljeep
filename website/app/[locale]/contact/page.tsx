@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Instagram, Facebook, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Instagram, Facebook, ExternalLink, Youtube } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import DynamicHero from '@/components/common/DynamicHero';
@@ -379,26 +379,48 @@ export default function ContactPage() {
               <p className="text-stone-gray mb-6">
                 Stay connected with us on social media for the latest tours, tips, and stunning photos from Tenerife
               </p>
-              <div className="flex gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <Link
                   href={companyInfo.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-lg p-4 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-lg p-3 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
                   aria-label="Follow us on Instagram"
                 >
-                  <Instagram className="w-6 h-6" />
-                  <span className="font-semibold">Instagram</span>
+                  <Instagram className="w-5 h-5" />
+                  <span className="font-semibold text-sm">Instagram</span>
                 </Link>
                 <Link
                   href={companyInfo.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#1877F2] text-white rounded-lg p-4 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-[#1877F2] text-white rounded-lg p-3 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
                   aria-label="Follow us on Facebook"
                 >
-                  <Facebook className="w-6 h-6" />
-                  <span className="font-semibold">Facebook</span>
+                  <Facebook className="w-5 h-5" />
+                  <span className="font-semibold text-sm">Facebook</span>
+                </Link>
+                <Link
+                  href={companyInfo.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white rounded-lg p-3 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
+                  aria-label="Follow us on TikTok"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                  <span className="font-semibold text-sm">TikTok</span>
+                </Link>
+                <Link
+                  href={companyInfo.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#FF0000] text-white rounded-lg p-3 hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
+                  aria-label="Follow us on YouTube"
+                >
+                  <Youtube className="w-5 h-5" />
+                  <span className="font-semibold text-sm">YouTube</span>
                 </Link>
               </div>
             </div>
@@ -443,7 +465,7 @@ export default function ContactPage() {
             Get instant answers to your questions and book your tour directly through WhatsApp
           </p>
           <Link
-            href={`https://wa.me/${companyInfo.contact.whatsapp.replace(/[\s+]/g, '')}`}
+            href={companyInfo.contact.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
           >

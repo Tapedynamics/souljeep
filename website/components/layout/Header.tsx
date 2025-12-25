@@ -79,7 +79,9 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href={`tel:${companyInfo.contact.phone}`}
+              href={companyInfo.contact.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-white hover:text-sunset-gold transition-colors drop-shadow-lg"
             >
               <Phone className="w-4 h-4" />
@@ -177,7 +179,9 @@ export default function Header() {
 
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href={`tel:${companyInfo.contact.phone}`}
+                href={companyInfo.contact.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 py-3 text-ocean-blue font-medium"
               >
                 <Phone className="w-4 h-4" />

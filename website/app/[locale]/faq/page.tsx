@@ -258,7 +258,7 @@ export default function FAQPage() {
 
             {/* WhatsApp */}
             <Link
-              href={`https://wa.me/${companyInfo.contact.whatsapp.replace(/[\s+]/g, '')}`}
+              href={companyInfo.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-sand-beige rounded-xl p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1 group"

@@ -138,7 +138,7 @@ export default async function TourDetailPage({ params }: PageProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Euro className="w-5 h-5 text-sunset-gold" />
-                <span className="font-medium">From €{tour.price.twoPeople}</span>
+                <span className="font-medium">From €{tour.price.oneTwo}</span>
               </div>
             </div>
 
@@ -253,48 +253,38 @@ export default async function TourDetailPage({ params }: PageProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {/* 2 People */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {/* 1-2 People */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
               <Users className="w-12 h-12 text-ocean-blue mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">2 People</h3>
+              <h3 className="text-lg font-bold mb-2">1-2 People</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
-                €{tour.price.twoPeople}
+                €{tour.price.oneTwo}
               </div>
               <p className="text-sm text-stone-gray">per Jeep</p>
             </div>
 
-            {/* 3-4 People */}
+            {/* 3 People */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center border-2 border-sunset-orange relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-sunset-orange text-white text-xs font-bold px-3 py-1 rounded-full">
                 POPULAR
               </div>
               <Users className="w-12 h-12 text-ocean-blue mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">3-4 People</h3>
+              <h3 className="text-lg font-bold mb-2">3 People</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
-                €{tour.price.threeFourPeople}
+                €{tour.price.three}
               </div>
               <p className="text-sm text-stone-gray">per Jeep</p>
             </div>
 
-            {/* Extra Passenger */}
+            {/* 4 People */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
               <Users className="w-12 h-12 text-adventure-green mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Extra Passenger</h3>
+              <h3 className="text-lg font-bold mb-2">4 People</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
-                €{tour.price.extraPassenger}
+                €{tour.price.four}
               </div>
-              <p className="text-sm text-stone-gray">per person</p>
-            </div>
-
-            {/* Extra Driver */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-              <Users className="w-12 h-12 text-adventure-green mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Extra Driver</h3>
-              <div className="text-4xl font-bold text-sunset-orange mb-2">
-                €{tour.price.extraDriver}
-              </div>
-              <p className="text-sm text-stone-gray">additional driver</p>
+              <p className="text-sm text-stone-gray">per Jeep</p>
             </div>
           </div>
 

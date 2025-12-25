@@ -66,7 +66,7 @@ export default function TourCard({ tour }: TourCardProps) {
           </div>
           <div className="flex items-center gap-1">
             <Euro className="w-4 h-4" />
-            <span>{tCommon('from')} €{tour.price.twoPeople}</span>
+            <span>{tCommon('from')} €{tour.price.oneTwo}</span>
           </div>
         </div>
 

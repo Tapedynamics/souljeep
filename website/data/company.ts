@@ -6,8 +6,9 @@ export const companyInfo = {
   contact: {
     phone: '+34 822 68 45 04',
     phoneHours: '9:00 - 22:00',
-    email: 'info@souljeep.com',
+    email: 'greattripstenerife@gmail.com',
     whatsapp: '+34 822 68 45 04',
+    whatsappLink: 'https://wa.me/message/AJX3XAGZC7ZBO1',
   },
 
   location: {
@@ -34,14 +35,16 @@ export const companyInfo = {
   },
 
   social: {
-    instagram: 'https://instagram.com/souljeep',
-    facebook: 'https://facebook.com/souljeep',
+    instagram: 'https://www.instagram.com/souljeepexperience',
+    facebook: 'https://www.facebook.com/souljeepexperience',
+    tiktok: 'https://tiktok.com/@soul.jeep.experience',
+    youtube: 'https://www.youtube.com/@SoulJeepTenerifE',
     tripadvisor: 'https://www.tripadvisor.com/Attraction_Review-g662606-d33117873-Reviews-Soul_Jeep_Experience-Costa_Adeje_Adeje_Tenerife_Canary_Islands.html',
   },
 
   fareharbor: {
     accountName: 'souljeep',
-    bookingUrl: 'https://fareharbor.com/embeds/book/souljeep/?full-items=yes',
+    bookingUrl: 'https://fareharbor.com/book/souljeep/?full-items=yes',
   },
 
   features: [
@@ -66,12 +69,12 @@ export const faq = [
     answer: 'Yes, you must be at least 21 years old with a valid driver\'s license and at least 2 years of driving experience.'
   },
   {
-    question: 'Can I add an extra driver?',
-    answer: 'Yes! You can add an additional driver for €30. Both drivers must meet the age and license requirements.'
+    question: 'Do you offer pick up service?',
+    answer: 'No, we don\'t offer pick up service. However, we offer a €10 discount for customers who reach us by taxi and bring the receipt.'
   },
   {
     question: 'What\'s included in the tour price?',
-    answer: 'The tour includes Jeep Wrangler rental for 3 hours, full fuel tank, comprehensive insurance, sandwiches, soft drinks, and professional route guidance.'
+    answer: 'The tour includes Jeep Wrangler rental for 3 hours, full fuel tank, comprehensive insurance, and professional route guidance.'
   },
   {
     question: 'What if the weather is bad?',
