@@ -82,7 +82,7 @@ export const tours: Tour[] = [
       'Warm clothing recommended (temperature drops at altitude)',
       'Camera highly recommended'
     ],
-    fareharbor: 'https://fareharbor.com/book/souljeep/items/525897/?full-items=yes',
+    fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
       hero: '/images/tours/teide-sunset/hero.jpg',
       gallery: [
@@ -150,7 +150,7 @@ export const tours: Tour[] = [
       'Sunscreen and sunglasses recommended',
       'Comfortable clothing and closed shoes'
     ],
-    fareharbor: 'https://fareharbor.com/book/souljeep/items/525898/?full-items=yes',
+    fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
       hero: '/images/tours/teide-day/hero.jpg',
       gallery: [
@@ -223,7 +223,7 @@ export const tours: Tour[] = [
       'Swimwear and towel recommended',
       'Sunscreen essential'
     ],
-    fareharbor: 'https://fareharbor.com/book/souljeep/items/525899/?full-items=yes',
+    fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
       hero: '/images/tours/coastal/hero.jpg',
       gallery: [

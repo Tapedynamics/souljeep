@@ -44,7 +44,7 @@ export const companyInfo = {
 
   fareharbor: {
     accountName: 'souljeep',
-    bookingUrl: 'https://fareharbor.com/book/souljeep/?full-items=yes',
+    bookingUrl: 'https://fareharbor.com/embeds/book/souljeep/items/',
   },
 
   features: [
