@@ -1,7 +1,7 @@
 export const companyInfo = {
   name: 'Soul Jeep Experience',
-  tagline: 'Discover Tenerife in Style',
-  description: 'Premium Jeep Wrangler tours across Tenerife\'s most spectacular landscapes. Drive your own adventure.',
+  tagline: 'Descubre Tenerife con Estilo',
+  description: 'Tours premium en Jeep Wrangler por los paisajes más espectaculares de Tenerife. Conduce tu propia aventura.',
 
   contact: {
     phone: '+34 822 68 45 04',
@@ -48,52 +48,52 @@ export const companyInfo = {
   },
 
   features: [
-    'Drive Your Own Jeep Wrangler',
-    'Small Group Experiences',
-    'Professional Route Guidance',
-    'Fully Insured Vehicles',
-    'Refreshments Included',
-    'Flexible Booking'
+    'Conduce Tu Propio Jeep Wrangler',
+    'Experiencias en Grupos Pequeños',
+    'Guía Profesional de Ruta',
+    'Vehículos Totalmente Asegurados',
+    'Refrescos Incluidos',
+    'Reserva Flexible'
   ],
 
   certifications: [
-    'Fully Licensed Tour Operator',
-    'Comprehensive Insurance',
-    'Safety Certified Vehicles',
+    'Operador Turístico con Licencia',
+    'Seguro a Todo Riesgo',
+    'Vehículos Certificados en Seguridad',
   ]
 };
 
 export const faq = [
   {
-    question: 'Do I need a driving license?',
-    answer: 'Yes, you must be at least 21 years old with a valid driver\'s license and at least 2 years of driving experience.'
+    question: '¿Necesito carnet de conducir?',
+    answer: 'Sí, debes tener al menos 21 años con un carnet de conducir válido y al menos 2 años de experiencia de conducción.'
   },
   {
-    question: 'Do you offer pick up service?',
-    answer: 'No, we don\'t offer pick up service. However, we offer a €10 discount for customers who reach us by taxi and bring the receipt.'
+    question: '¿Ofrecen servicio de recogida?',
+    answer: 'No, no ofrecemos servicio de recogida. Sin embargo, ofrecemos un descuento de 10€ para clientes que lleguen en taxi y traigan el recibo.'
   },
   {
-    question: 'What\'s included in the tour price?',
-    answer: 'The tour includes Jeep Wrangler rental for 3 hours, full fuel tank, comprehensive insurance, and professional route guidance.'
+    question: '¿Qué incluye el precio del tour?',
+    answer: 'El tour incluye alquiler de Jeep Wrangler durante 3 horas, depósito de combustible lleno, seguro a todo riesgo y guía profesional de ruta.'
   },
   {
-    question: 'What if the weather is bad?',
-    answer: 'Tours operate in most weather conditions. However, if conditions are unsafe, we\'ll reschedule your tour or provide a full refund.'
+    question: '¿Qué pasa si hace mal tiempo?',
+    answer: 'Los tours operan en la mayoría de condiciones climáticas. Sin embargo, si las condiciones son inseguras, reprogramaremos tu tour o te daremos un reembolso completo.'
   },
   {
-    question: 'How many people fit in one Jeep?',
-    answer: 'Each Jeep Wrangler accommodates up to 4 people comfortably (including the driver).'
+    question: '¿Cuántas personas caben en un Jeep?',
+    answer: 'Cada Jeep Wrangler tiene capacidad para hasta 4 personas cómodamente (incluyendo el conductor).'
   },
   {
-    question: 'Can I cancel or reschedule?',
-    answer: 'Yes, free cancellation is available up to 24 hours before your tour. Contact us via phone or WhatsApp to make changes.'
+    question: '¿Puedo cancelar o reprogramar?',
+    answer: 'Sí, la cancelación gratuita está disponible hasta 24 horas antes de tu tour. Contáctanos por teléfono o WhatsApp para hacer cambios.'
   },
   {
-    question: 'Is the tour suitable for children?',
-    answer: 'Yes! Children of all ages are welcome. Child seats can be provided upon request at no extra charge.'
+    question: '¿El tour es apto para niños?',
+    answer: '¡Sí! Los niños de todas las edades son bienvenidos. Se pueden proporcionar sillas infantiles a petición sin cargo adicional.'
   },
   {
-    question: 'What should I bring?',
-    answer: 'For Teide tours: warm clothing and camera. For Coastal tours: swimwear, towel, and sunscreen. Sunglasses and comfortable shoes recommended for all tours.'
+    question: '¿Qué debo llevar?',
+    answer: 'Para tours del Teide: ropa de abrigo y cámara. Para tours costeros: bañador, toalla y protector solar. Gafas de sol y calzado cómodo recomendados para todos los tours.'
   }
 ];

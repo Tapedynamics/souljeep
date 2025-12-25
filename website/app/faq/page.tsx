@@ -26,15 +26,15 @@ export default function FAQPage() {
       { ...faq[6], category: 'General' },
       { ...faq[7], category: 'General' },
     ],
-    'Booking & Payment': [
-      { ...faq[2], category: 'Booking & Payment' },
-      { ...faq[5], category: 'Booking & Payment' },
+    'Reservas y Pagos': [
+      { ...faq[2], category: 'Reservas y Pagos' },
+      { ...faq[5], category: 'Reservas y Pagos' },
     ],
-    'Tours & Weather': [
-      { ...faq[3], category: 'Tours & Weather' },
+    'Tours y Clima': [
+      { ...faq[3], category: 'Tours y Clima' },
     ],
-    'Drivers & Requirements': [
-      { ...faq[1], category: 'Drivers & Requirements' },
+    'Conductores y Requisitos': [
+      { ...faq[1], category: 'Conductores y Requisitos' },
     ]
   };
 
@@ -57,25 +57,25 @@ export default function FAQPage() {
   const floatingCards = [
     {
       icon: <HelpCircle className="w-6 h-6" />,
-      text: "General Info",
+      text: "Info General",
       position: { top: "15%", left: "8%" },
       delay: 0.2
     },
     {
       icon: <BookOpen className="w-6 h-6" />,
-      text: "Tours & Weather",
+      text: "Tours y Clima",
       position: { top: "25%", right: "12%" },
       delay: 0.4
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
-      text: "Booking & Payment",
+      text: "Reservas y Pagos",
       position: { bottom: "20%", left: "10%" },
       delay: 0.6
     },
     {
       icon: <Cloud className="w-6 h-6" />,
-      text: "Requirements",
+      text: "Requisitos",
       position: { bottom: "30%", right: "15%" },
       delay: 0.8
     },
@@ -85,9 +85,9 @@ export default function FAQPage() {
     <>
       {/* Dynamic Hero Section */}
       <DynamicHero
-        title="Frequently Asked "
-        highlightText="Questions"
-        subtitle="Everything you need to know about our Jeep adventures in Tenerife"
+        title="Preguntas "
+        highlightText="Frecuentes"
+        subtitle="Todo lo que necesitas saber sobre nuestras aventuras en Jeep en Tenerife"
         floatingCards={floatingCards}
         height="h-[45vh]"
       />
@@ -99,18 +99,18 @@ export default function FAQPage() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-stone-gray/50" />
             <input
               type="text"
-              placeholder="Search for answers..."
+              placeholder="Buscar respuestas..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 border-2 border-stone-gray/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-sunset-orange/50 focus:border-sunset-orange transition-colors text-lg"
-              aria-label="Search FAQs"
+              aria-label="Buscar FAQs"
             />
           </div>
           {searchQuery && (
             <p className="mt-3 text-sm text-stone-gray">
               {filteredFAQs && filteredFAQs.length > 0
-                ? `Found ${filteredFAQs.length} result${filteredFAQs.length !== 1 ? 's' : ''}`
-                : 'No results found. Try different keywords.'}
+                ? `${filteredFAQs.length} resultado${filteredFAQs.length !== 1 ? 's' : ''} encontrado${filteredFAQs.length !== 1 ? 's' : ''}`
+                : 'No se encontraron resultados. Prueba con otras palabras.'}
             </p>
           )}
         </div>
@@ -121,7 +121,7 @@ export default function FAQPage() {
         {filteredFAQs ? (
           // Show search results
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">Search Results</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">Resultados de Búsqueda</h2>
             <div className="space-y-4">
               {filteredFAQs.map((item, index) => (
                 <div
@@ -222,10 +222,10 @@ export default function FAQPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Still Have <span className="text-sunset-orange">Questions</span>?
+              ¿Aún Tienes <span className="text-sunset-orange">Preguntas</span>?
             </h2>
             <p className="text-lg text-stone-gray">
-              Our team is here to help! Reach out and we&apos;ll get back to you as soon as possible.
+              ¡Nuestro equipo está aquí para ayudarte! Contáctanos y te responderemos lo antes posible.
             </p>
           </div>
 
@@ -238,7 +238,7 @@ export default function FAQPage() {
               <div className="w-14 h-14 rounded-full bg-ocean-blue flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <Phone className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Call Us</h3>
+              <h3 className="text-lg font-bold mb-2">Llámanos</h3>
               <p className="text-stone-gray mb-2">{companyInfo.contact.phone}</p>
               <p className="text-sm text-stone-gray/70">{companyInfo.contact.phoneHours}</p>
             </Link>
@@ -251,9 +251,9 @@ export default function FAQPage() {
               <div className="w-14 h-14 rounded-full bg-sunset-orange flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <Mail className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Email Us</h3>
+              <h3 className="text-lg font-bold mb-2">Escríbenos</h3>
               <p className="text-stone-gray mb-2">{companyInfo.contact.email}</p>
-              <p className="text-sm text-stone-gray/70">Reply within 24h</p>
+              <p className="text-sm text-stone-gray/70">Respuesta en 24h</p>
             </Link>
 
             {/* WhatsApp */}
@@ -267,15 +267,15 @@ export default function FAQPage() {
                 <MessageCircle className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-              <p className="text-stone-gray mb-2">Instant messaging</p>
-              <p className="text-sm text-stone-gray/70">Quick responses</p>
+              <p className="text-stone-gray mb-2">Mensajería instantánea</p>
+              <p className="text-sm text-stone-gray/70">Respuestas rápidas</p>
             </Link>
           </div>
 
           <div className="text-center mt-8">
             <Link href="/contact">
               <Button variant="outline" size="lg">
-                Visit Contact Page
+                Ir a Contacto
               </Button>
             </Link>
           </div>
@@ -286,23 +286,23 @@ export default function FAQPage() {
       <Section background="sand" padding="xl">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Ready to <span className="text-sunset-orange">Book</span> Your Adventure?
+            ¿Listo para <span className="text-sunset-orange">Reservar</span> Tu Aventura?
           </h2>
           <p className="text-xl text-stone-gray mb-8">
-            All questions answered? Great! Book your Jeep Wrangler experience now and
-            get ready for the adventure of a lifetime in Tenerife.
+            ¿Todas las preguntas respondidas? ¡Genial! Reserva tu experiencia en Jeep Wrangler ahora y
+            prepárate para la aventura de tu vida en Tenerife.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg" className="group">
-                Book Now
+                Reservar Ahora
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/tours">
               <Button variant="outline" size="lg">
-                Browse Tours
+                Ver Tours
               </Button>
             </Link>
           </div>
