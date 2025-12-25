@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tour) {
     return {
-      title: 'Tour Not Found',
+      title: 'Tour No Encontrado',
     };
   }
 
@@ -114,7 +114,7 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container className="flex items-center justify-center h-full">
           <div className="text-center text-white">
             <div className="inline-block mb-4 px-4 py-2 bg-sunset-orange/90 rounded-full text-sm font-semibold uppercase tracking-wide">
-              {tour.category} Adventure
+              Aventura {tour.category === 'teide' ? 'Teide' : tour.category === 'coastal' ? 'Costa' : 'Aventura'}
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               {tour.title}
@@ -134,11 +134,11 @@ export default async function TourDetailPage({ params }: PageProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-sunset-gold" />
-                <span className="font-medium">2-4 People</span>
+                <span className="font-medium">2-4 Personas</span>
               </div>
               <div className="flex items-center gap-2">
                 <Euro className="w-5 h-5 text-sunset-gold" />
-                <span className="font-medium">From €{tour.price.oneTwo}</span>
+                <span className="font-medium">Desde €{tour.price.oneTwo}</span>
               </div>
             </div>
 
@@ -146,13 +146,13 @@ export default async function TourDetailPage({ params }: PageProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={tour.fareharbor} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="lg" className="group min-w-[200px]">
-                  Book This Tour
+                  Reservar Este Tour
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <a href="#itinerary">
                 <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-stone-gray min-w-[200px]">
-                  View Itinerary
+                  Ver Itinerario
                 </Button>
               </a>
             </div>
@@ -170,10 +170,10 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container size="lg">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Tour <span className="text-sunset-orange">Highlights</span>
+              <span className="text-sunset-orange">Destacados</span> del Tour
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-              What makes this adventure unforgettable
+              Lo que hace esta aventura inolvidable
             </p>
           </div>
 
@@ -200,10 +200,10 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container size="lg">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Your <span className="text-ocean-blue">Itinerary</span>
+              Tu <span className="text-ocean-blue">Itinerario</span>
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-              A detailed timeline of your {tour.duration} adventure
+              Un recorrido detallado de tu aventura de {tour.duration}
             </p>
           </div>
 
@@ -246,10 +246,10 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container size="lg">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Pricing & <span className="text-sunset-orange">Options</span>
+              Precios y <span className="text-sunset-orange">Opciones</span>
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees
+              Precios transparentes sin cargos ocultos
             </p>
           </div>
 
@@ -257,11 +257,11 @@ export default async function TourDetailPage({ params }: PageProps) {
             {/* 1-2 People */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
               <Users className="w-12 h-12 text-ocean-blue mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">1-2 People</h3>
+              <h3 className="text-lg font-bold mb-2">1-2 Personas</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
                 €{tour.price.oneTwo}
               </div>
-              <p className="text-sm text-stone-gray">per Jeep</p>
+              <p className="text-sm text-stone-gray">por Jeep</p>
             </div>
 
             {/* 3 People */}
@@ -270,28 +270,28 @@ export default async function TourDetailPage({ params }: PageProps) {
                 POPULAR
               </div>
               <Users className="w-12 h-12 text-ocean-blue mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">3 People</h3>
+              <h3 className="text-lg font-bold mb-2">3 Personas</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
                 €{tour.price.three}
               </div>
-              <p className="text-sm text-stone-gray">per Jeep</p>
+              <p className="text-sm text-stone-gray">por Jeep</p>
             </div>
 
             {/* 4 People */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
               <Users className="w-12 h-12 text-adventure-green mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">4 People</h3>
+              <h3 className="text-lg font-bold mb-2">4 Personas</h3>
               <div className="text-4xl font-bold text-sunset-orange mb-2">
                 €{tour.price.four}
               </div>
-              <p className="text-sm text-stone-gray">per Jeep</p>
+              <p className="text-sm text-stone-gray">por Jeep</p>
             </div>
           </div>
 
           <div className="text-center mt-8">
             <Link href={tour.fareharbor} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg" className="group">
-                Check Availability
+                Ver Disponibilidad
                 <Calendar className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               </Button>
             </Link>
@@ -307,7 +307,7 @@ export default async function TourDetailPage({ params }: PageProps) {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
                 <Check className="w-8 h-8 text-adventure-green" />
-                What&apos;s <span className="text-adventure-green">Included</span>
+                Qué <span className="text-adventure-green">Incluye</span>
               </h2>
               <div className="space-y-4">
                 {tour.includes.map((item, index) => (
@@ -326,7 +326,7 @@ export default async function TourDetailPage({ params }: PageProps) {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
                 <AlertCircle className="w-8 h-8 text-ocean-blue" />
-                <span className="text-ocean-blue">Requirements</span>
+                <span className="text-ocean-blue">Requisitos</span>
               </h2>
               <div className="space-y-4">
                 {tour.requirements.map((item, index) => (
@@ -349,10 +349,10 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container size="lg">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Photo <span className="text-sunset-orange">Gallery</span>
+              Galería de <span className="text-sunset-orange">Fotos</span>
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-              Get a glimpse of what awaits you
+              Descubre lo que te espera
             </p>
           </div>
 
@@ -381,10 +381,10 @@ export default async function TourDetailPage({ params }: PageProps) {
         <Container size="md">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Frequently Asked <span className="text-ocean-blue">Questions</span>
+              Preguntas <span className="text-ocean-blue">Frecuentes</span>
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl mx-auto">
-              Everything you need to know about your tour
+              Todo lo que necesitas saber sobre tu tour
             </p>
           </div>
 
@@ -421,10 +421,10 @@ export default async function TourDetailPage({ params }: PageProps) {
 
         <Container className="relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to Start Your Adventure?
+            ¿Listo para Empezar tu Aventura?
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
-            Book your {tour.title} experience now and create memories that will last a lifetime.
+            Reserva tu experiencia {tour.title} ahora y crea recuerdos que durarán toda la vida.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -434,7 +434,7 @@ export default async function TourDetailPage({ params }: PageProps) {
                 size="lg"
                 className="bg-white text-sunset-orange hover:bg-sand-beige shadow-2xl min-w-[200px] group"
               >
-                Book Now
+                Reservar Ahora
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -444,14 +444,14 @@ export default async function TourDetailPage({ params }: PageProps) {
                 size="lg"
                 className="border-2 border-white text-white hover:bg-white hover:text-sunset-orange min-w-[200px]"
               >
-                Explore Other Tours
+                Explorar Otros Tours
               </Button>
             </Link>
           </div>
 
           <div className="flex items-center justify-center gap-2 text-white/90">
             <MapPin className="w-5 h-5" />
-            <span className="text-sm">Departure from C.C. Aquamall, Costa Adeje</span>
+            <span className="text-sm">Salida desde C.C. Aquamall, Costa Adeje</span>
           </div>
         </Container>
       </section>

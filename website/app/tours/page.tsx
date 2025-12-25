@@ -11,12 +11,12 @@ import Section from '@/components/ui/Section';
 import { MapPin, Phone, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Our Tours - Jeep Wrangler Adventures in Tenerife | Soul Jeep Experience',
-  description: 'Explore our collection of premium Jeep Wrangler tours in Tenerife. From Teide sunset adventures to coastal explorations, find your perfect experience.',
-  keywords: 'Tenerife tours, Jeep Wrangler tours, Teide tours, coastal tours, adventure tours Tenerife',
+  title: 'Nuestros Tours - Aventuras en Jeep Wrangler en Tenerife | Soul Jeep Experience',
+  description: 'Explora nuestra colección de tours premium en Jeep Wrangler en Tenerife. Desde atardeceres en el Teide hasta exploraciones costeras, encuentra tu experiencia perfecta.',
+  keywords: 'Tours Tenerife, Tours Jeep Wrangler, Tours Teide, Tours costa, Aventuras Tenerife',
   openGraph: {
-    title: 'Our Tours - Premium Jeep Adventures in Tenerife',
-    description: 'Explore our collection of premium Jeep Wrangler tours in Tenerife. Drive your own adventure.',
+    title: 'Nuestros Tours - Aventuras Premium en Jeep en Tenerife',
+    description: 'Explora nuestra colección de tours premium en Jeep Wrangler en Tenerife. Conduce tu propia aventura.',
     images: ['/images/og-image.jpg'],
   },
 };
@@ -110,11 +110,11 @@ export default async function ToursPage() {
         <Section background="gradient" padding="xl">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-adventure-green">Adventure</span> Experiences
+              Experiencias de <span className="text-adventure-green">Aventura</span>
             </h2>
             <p className="text-xl text-stone-gray max-w-2xl">
-              For those seeking the ultimate thrill. Off-road adventures, challenging terrain,
-              and unforgettable memories await.
+              Para quienes buscan la máxima emoción. Aventuras todoterreno, terrenos desafiantes
+              y recuerdos inolvidables te esperan.
             </p>
           </div>
 
@@ -131,10 +131,10 @@ export default async function ToursPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why Choose <span className="text-ocean-blue">Soul Jeep</span>?
+              ¿Por Qué Elegir <span className="text-ocean-blue">Soul Jeep</span>?
             </h2>
             <p className="text-xl text-stone-gray">
-              We offer more than just a tour - we offer an experience
+              Ofrecemos más que un tour - ofrecemos una experiencia
             </p>
           </div>
 
@@ -176,10 +176,10 @@ export default async function ToursPage() {
       <section className="py-20 bg-gradient-to-br from-ocean-blue to-ocean-deep text-white">
         <Container className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready for Your Next Adventure?
+            ¿Listo para Tu Próxima Aventura?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Book your Jeep Wrangler experience today and create memories that will last a lifetime.
+            Reserva tu experiencia en Jeep Wrangler hoy y crea recuerdos que durarán toda la vida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -188,7 +188,7 @@ export default async function ToursPage() {
                 size="lg"
                 className="bg-sunset-orange hover:bg-sunset-gold min-w-[200px]"
               >
-                Book Now
+                Reservar Ahora
               </Button>
             </Link>
             <Link href={`tel:${companyInfo.contact.phone}`}>
@@ -197,7 +197,7 @@ export default async function ToursPage() {
                 size="lg"
                 className="border-2 border-white text-white hover:bg-white hover:text-ocean-blue min-w-[200px]"
               >
-                Call Us
+                Llámanos
               </Button>
             </Link>
           </div>

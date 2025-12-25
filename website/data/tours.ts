@@ -32,55 +32,55 @@ export const tours: Tour[] = [
     id: '1',
     slug: 'teide-sunset',
     title: 'Teide Sunset',
-    subtitle: 'Magic on the Volcano',
-    description: 'Watch the sun dip behind the horizon from the summit of Europe\'s highest volcano. Experience a once-in-a-lifetime sunset on Mount Teide, surrounded by surreal colors and incredible panoramic views that will take your breath away.',
-    duration: '3 hours',
+    subtitle: 'Magia en el Volcán',
+    description: 'Contempla el sol desapareciendo tras el horizonte desde la cima del volcán más alto de Europa. Vive un atardecer único en el Monte Teide, rodeado de colores surrealistas y vistas panorámicas increíbles que te dejarán sin aliento.',
+    duration: '3 horas',
     price: {
       oneTwo: 220,
       three: 240,
       four: 260,
     },
     highlights: [
-      'Sunset from 2,000m altitude',
-      'Panoramic views of Tenerife',
-      'Drive your own Jeep Wrangler',
-      'Volcanic landscape photography',
-      'Small group experience'
+      'Atardecer desde 2.000m de altitud',
+      'Vistas panorámicas de Tenerife',
+      'Conduce tu propio Jeep Wrangler',
+      'Fotografía de paisajes volcánicos',
+      'Experiencia en grupos pequeños'
     ],
     includes: [
-      'Jeep Wrangler rental (3 hours)',
-      'Full fuel tank',
-      'Comprehensive insurance',
-      'Professional route guidance'
+      'Alquiler de Jeep Wrangler (3 horas)',
+      'Depósito de combustible lleno',
+      'Seguro a todo riesgo',
+      'Guía profesional de ruta'
     ],
     itinerary: [
       {
         time: '17:00',
-        title: 'Departure from Costa Adeje',
-        description: 'Meet at our office in C.C. Aquamall. Brief orientation and safety check of your Jeep Wrangler.'
+        title: 'Salida desde Costa Adeje',
+        description: 'Encuentro en nuestra oficina en C.C. Aquamall. Breve orientación y revisión de seguridad de tu Jeep Wrangler.'
       },
       {
         time: '17:30',
-        title: 'Ascent to Teide National Park',
-        description: '120km scenic drive through winding mountain roads and unique volcanic landscapes.'
+        title: 'Ascenso al Parque Nacional del Teide',
+        description: 'Recorrido escénico de 120km por serpenteantes carreteras de montaña y paisajes volcánicos únicos.'
       },
       {
         time: '18:30',
-        title: 'Sunset Viewing Point',
-        description: 'Arrive at the perfect spot to watch the magical sunset over the Atlantic Ocean and neighboring islands.'
+        title: 'Mirador del Atardecer',
+        description: 'Llegada al lugar perfecto para contemplar el mágico atardecer sobre el Océano Atlántico y las islas vecinas.'
       },
       {
         time: '19:30',
-        title: 'Return Journey',
-        description: 'Drive back to Costa Adeje with unforgettable memories and amazing photos.'
+        title: 'Regreso',
+        description: 'Vuelta a Costa Adeje con recuerdos inolvidables y fotos increíbles.'
       }
     ],
     requirements: [
-      'Minimum driver age: 21 years',
-      'Driving experience: 2+ years',
-      'Valid driver\'s license required',
-      'Warm clothing recommended (temperature drops at altitude)',
-      'Camera highly recommended'
+      'Edad mínima del conductor: 21 años',
+      'Experiencia de conducción: 2+ años',
+      'Carnet de conducir válido obligatorio',
+      'Ropa de abrigo recomendada (la temperatura baja en altitud)',
+      'Cámara muy recomendada'
     ],
     fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
@@ -98,57 +98,57 @@ export const tours: Tour[] = [
   {
     id: '2',
     slug: 'teide-by-day',
-    title: 'Teide By Day',
-    subtitle: 'Volcanic Adventure',
-    description: 'Embark on a 120 km daytime adventure across Teide National Park. Discover the towering volcano, navigate winding mountain roads, and experience unique volcanic landscapes.',
-    duration: '3 hours',
+    title: 'Teide de Día',
+    subtitle: 'Aventura Volcánica',
+    description: 'Embárcate en una aventura diurna de 120 km por el Parque Nacional del Teide. Descubre el imponente volcán, navega por serpenteantes carreteras de montaña y experimenta paisajes volcánicos únicos.',
+    duration: '3 horas',
     price: {
       oneTwo: 220,
       three: 240,
       four: 260,
     },
     highlights: [
-      '120km adventure route',
-      'Teide National Park exploration',
-      'Lunar-like volcanic landscapes',
-      'Photo stops at scenic viewpoints',
-      'Drive your own Wrangler'
+      'Ruta de aventura de 120km',
+      'Exploración del Parque Nacional del Teide',
+      'Paisajes volcánicos de aspecto lunar',
+      'Paradas fotográficas en miradores',
+      'Conduce tu propio Wrangler'
     ],
     includes: [
-      'Jeep Wrangler rental (3 hours)',
-      'Full fuel tank',
-      'Comprehensive insurance',
-      'Professional route guidance',
-      'National Park access'
+      'Alquiler de Jeep Wrangler (3 horas)',
+      'Depósito de combustible lleno',
+      'Seguro a todo riesgo',
+      'Guía profesional de ruta',
+      'Acceso al Parque Nacional'
     ],
     itinerary: [
       {
         time: '10:00',
-        title: 'Morning Departure',
-        description: 'Start your adventure from Costa Adeje with a full briefing and vehicle check.'
+        title: 'Salida por la Mañana',
+        description: 'Comienza tu aventura desde Costa Adeje con una orientación completa y revisión del vehículo.'
       },
       {
         time: '10:30',
-        title: 'Mountain Ascent',
-        description: 'Drive through diverse ecosystems as you climb from sea level to 2,000+ meters.'
+        title: 'Ascenso a la Montaña',
+        description: 'Conduce a través de diversos ecosistemas mientras subes desde el nivel del mar hasta más de 2.000 metros.'
       },
       {
         time: '11:30',
-        title: 'Teide National Park',
-        description: 'Explore the UNESCO World Heritage site with its otherworldly volcanic formations.'
+        title: 'Parque Nacional del Teide',
+        description: 'Explora el sitio Patrimonio de la Humanidad de la UNESCO con sus formaciones volcánicas de otro mundo.'
       },
       {
         time: '12:30',
-        title: 'Return to Costa Adeje',
-        description: 'Complete the circuit with spectacular views all the way back.'
+        title: 'Regreso a Costa Adeje',
+        description: 'Completa el circuito con vistas espectaculares durante todo el camino de vuelta.'
       }
     ],
     requirements: [
-      'Minimum driver age: 21 years',
-      'Driving experience: 2+ years',
-      'Valid driver\'s license required',
-      'Sunscreen and sunglasses recommended',
-      'Comfortable clothing and closed shoes'
+      'Edad mínima del conductor: 21 años',
+      'Experiencia de conducción: 2+ años',
+      'Carnet de conducir válido obligatorio',
+      'Protector solar y gafas de sol recomendados',
+      'Ropa cómoda y calzado cerrado'
     ],
     fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
@@ -166,62 +166,62 @@ export const tours: Tour[] = [
   {
     id: '3',
     slug: 'coastal-tour',
-    title: 'Coastal Tour',
-    subtitle: 'Cliffs, Coves, and Ocean Views',
-    description: 'Cruise along Tenerife\'s spectacular southern coastline in your private Jeep Wrangler. Discover dramatic Los Gigantes cliffs, hidden coves, and swim in the crystal-clear waters of El Balito harbor.',
-    duration: '3 hours',
+    title: 'Tour Costero',
+    subtitle: 'Acantilados, Calas y Vistas al Mar',
+    description: 'Recorre la espectacular costa sur de Tenerife en tu Jeep Wrangler privado. Descubre los impresionantes acantilados de Los Gigantes, calas escondidas y báñate en las aguas cristalinas del puerto de El Balito.',
+    duration: '3 horas',
     price: {
       oneTwo: 220,
       three: 240,
       four: 260,
     },
     highlights: [
-      'Los Gigantes cliff views',
-      'Optional swimming at El Balito harbor',
-      'Coastal scenic drive',
-      'Hidden beaches and coves',
-      'Atlantic Ocean panoramas',
-      'Beachfront photo opportunities'
+      'Vistas de los acantilados de Los Gigantes',
+      'Baño opcional en el puerto de El Balito',
+      'Recorrido escénico por la costa',
+      'Playas y calas escondidas',
+      'Panorámicas del Océano Atlántico',
+      'Oportunidades fotográficas frente al mar'
     ],
     includes: [
-      'Jeep Wrangler rental (3 hours)',
-      'Full fuel tank',
-      'Comprehensive insurance',
-      'Professional route guidance'
+      'Alquiler de Jeep Wrangler (3 horas)',
+      'Depósito de combustible lleno',
+      'Seguro a todo riesgo',
+      'Guía profesional de ruta'
     ],
     itinerary: [
       {
         time: '10:00',
-        title: 'Coastal Departure',
-        description: 'Begin your journey from Costa Adeje along the stunning western coastline.'
+        title: 'Salida por la Costa',
+        description: 'Comienza tu viaje desde Costa Adeje por la impresionante costa occidental.'
       },
       {
         time: '10:45',
-        title: 'Los Gigantes Cliffs',
-        description: 'Stop to admire the majestic 600-meter high cliffs rising from the ocean.'
+        title: 'Acantilados de Los Gigantes',
+        description: 'Parada para admirar los majestuosos acantilados de 600 metros que emergen del océano.'
       },
       {
         time: '11:15',
-        title: 'Scenic Coastal Drive',
-        description: 'Navigate winding coastal roads with breathtaking ocean views at every turn.'
+        title: 'Recorrido Escénico por la Costa',
+        description: 'Navega por serpenteantes carreteras costeras con impresionantes vistas al mar en cada curva.'
       },
       {
         time: '11:45',
-        title: 'El Balito Harbor',
-        description: 'Arrive at the picturesque harbor. Optional swimming and relaxation in crystal-clear waters.'
+        title: 'Puerto de El Balito',
+        description: 'Llegada al pintoresco puerto. Baño opcional y relax en aguas cristalinas.'
       },
       {
         time: '12:30',
-        title: 'Return Journey',
-        description: 'Drive back to Costa Adeje along the beautiful coastline.'
+        title: 'Regreso',
+        description: 'Vuelta a Costa Adeje por la hermosa costa.'
       }
     ],
     requirements: [
-      'Minimum driver age: 21 years',
-      'Driving experience: 2+ years',
-      'Valid driver\'s license required',
-      'Swimwear and towel recommended',
-      'Sunscreen essential'
+      'Edad mínima del conductor: 21 años',
+      'Experiencia de conducción: 2+ años',
+      'Carnet de conducir válido obligatorio',
+      'Bañador y toalla recomendados',
+      'Protector solar imprescindible'
     ],
     fareharbor: 'https://fareharbor.com/embeds/book/souljeep/items/',
     images: {
