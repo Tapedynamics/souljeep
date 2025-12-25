@@ -31,26 +31,27 @@ export default function Header() {
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group relative h-12">
-            <Image
-              src="/images/logo.png"
-              alt="Soul Jeep Experience"
-              width={180}
-              height={60}
-              className="h-full w-auto object-contain drop-shadow-2xl"
-              style={{ background: 'transparent' }}
-              priority
-              onError={(e) => {
-                // Fallback to text logo if image doesn't exist
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = target.nextElementSibling as HTMLElement;
-                if (fallback) fallback.style.display = 'block';
-              }}
-            />
-            <div className="hidden text-2xl font-bold drop-shadow-lg">
-              <span className="text-white">SOUL</span>
-              <span className="text-sunset-gold">JEEP</span>
+          <Link href="/" className="flex items-center group relative">
+            <div className="bg-white rounded-lg px-3 py-2 shadow-lg">
+              <Image
+                src="/images/logo.png"
+                alt="Soul Jeep Experience"
+                width={160}
+                height={50}
+                className="h-12 w-auto object-contain"
+                priority
+                onError={(e) => {
+                  // Fallback to text logo if image doesn't exist
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'block';
+                }}
+              />
+              <div className="hidden text-2xl font-bold">
+                <span className="text-stone-gray">SOUL</span>
+                <span className="text-sunset-orange">JEEP</span>
+              </div>
             </div>
           </Link>
 
