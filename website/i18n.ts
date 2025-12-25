@@ -2,28 +2,20 @@ import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 // Define supported locales
-export const locales = ['en', 'it', 'fr', 'es', 'de'] as const;
+export const locales = ['es'] as const;
 export type Locale = (typeof locales)[number];
 
 // Default locale
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'es';
 
 // Locale display names
 export const localeNames: Record<Locale, string> = {
-  en: 'English',
-  it: 'Italiano',
-  fr: 'Français',
   es: 'Español',
-  de: 'Deutsch',
 };
 
 // Locale flags (emoji)
 export const localeFlags: Record<Locale, string> = {
-  en: '🇬🇧',
-  it: '🇮🇹',
-  fr: '🇫🇷',
   es: '🇪🇸',
-  de: '🇩🇪',
 };
 
 export default getRequestConfig(async ({ locale }) => {
