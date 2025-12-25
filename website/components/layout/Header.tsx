@@ -19,11 +19,11 @@ export default function Header() {
   const currentLocale = (params.locale as Locale) || 'es';
 
   const navLinks = [
-    { href: `/${currentLocale}`, label: t('home') },
-    { href: `/${currentLocale}/tours`, label: t('tours') },
-    { href: `/${currentLocale}/gallery`, label: t('gallery') },
-    { href: `/${currentLocale}/about`, label: t('about') },
-    { href: `/${currentLocale}/contact`, label: t('contact') },
+    { href: '/', label: t('home') },
+    { href: '/tours', label: t('tours') },
+    { href: '/gallery', label: t('gallery') },
+    { href: '/about', label: t('about') },
+    { href: '/contact', label: t('contact') },
   ];
 
   return (

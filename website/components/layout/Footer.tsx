@@ -1,19 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import { companyInfo } from '@/data/company';
-import type { Locale } from '@/i18n';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
   const tCompany = useTranslations('company');
-  const params = useParams();
-  const currentLocale = (params.locale as Locale) || 'en';
+
   return (
     <footer className="bg-stone-gray text-white">
       <Container>
@@ -33,27 +30,27 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-lg">{t('quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${currentLocale}/tours`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href="/tours" className="text-sand-beige hover:text-sunset-orange transition-colors">
                   {t('ourTours')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${currentLocale}/gallery`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href="/gallery" className="text-sand-beige hover:text-sunset-orange transition-colors">
                   {tNav('gallery')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${currentLocale}/about`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href="/about" className="text-sand-beige hover:text-sunset-orange transition-colors">
                   {tNav('about')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${currentLocale}/faq`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href="/faq" className="text-sand-beige hover:text-sunset-orange transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href={`/${currentLocale}/contact`} className="text-sand-beige hover:text-sunset-orange transition-colors">
+                <Link href="/contact" className="text-sand-beige hover:text-sunset-orange transition-colors">
                   {t('contact')}
                 </Link>
               </li>
