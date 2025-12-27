@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'FAQ | Soul Jeep Experience - Frequently Asked Questions',
-  description: 'Find answers to common questions about our Jeep Wrangler tours in Tenerife. Learn about requirements, pricing, cancellation policy, and what to expect.',
-  keywords: 'jeep tour faq, tenerife tours questions, jeep rental tenerife, tour requirements, booking questions',
+  title: 'Preguntas Frecuentes | Soul Jeep Experience - Tours en Jeep en Tenerife',
+  description: 'Encuentra respuestas a las preguntas más comunes sobre nuestros tours en Jeep Wrangler en Tenerife. Conoce los requisitos, precios, política de cancelación y qué esperar.',
+  keywords: 'preguntas frecuentes jeep tour, faq tours tenerife, requisitos tour jeep, reservas preguntas',
   openGraph: {
-    title: 'FAQ - Soul Jeep Experience',
-    description: 'Answers to frequently asked questions about our Jeep Wrangler tours in Tenerife.',
+    title: 'Preguntas Frecuentes - Soul Jeep Experience',
+    description: 'Respuestas a las preguntas más frecuentes sobre nuestros tours en Jeep Wrangler en Tenerife.',
     url: 'https://www.souljeep.com/faq',
     images: ['/images/og-image.jpg'],
   },

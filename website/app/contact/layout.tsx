@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Soul Jeep Experience - Get in Touch',
-  description: 'Contact Soul Jeep Experience for bookings, inquiries, and information about our Jeep Wrangler tours in Tenerife. We\'re here to help plan your perfect adventure.',
-  keywords: 'contact soul jeep, tenerife tours contact, jeep tour booking, costa adeje contact',
+  title: 'Contacto | Soul Jeep Experience - Tours en Jeep en Tenerife',
+  description: 'Contacta con Soul Jeep Experience para reservas, consultas e información sobre nuestros tours en Jeep Wrangler en Tenerife. Estamos aquí para ayudarte a planificar tu aventura perfecta.',
+  keywords: 'contacto soul jeep, tours tenerife contacto, reservar jeep tour, costa adeje contacto',
   openGraph: {
-    title: 'Contact Soul Jeep Experience',
-    description: 'Get in touch with Soul Jeep Experience for bookings and inquiries about our Tenerife Jeep tours.',
+    title: 'Contacto - Soul Jeep Experience',
+    description: 'Ponte en contacto con Soul Jeep Experience para reservas y consultas sobre nuestros tours en Jeep en Tenerife.',
     url: 'https://www.souljeep.com/contact',
     images: ['/images/og-image.jpg'],
   },

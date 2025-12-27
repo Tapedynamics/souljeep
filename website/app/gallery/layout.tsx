@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Photo Gallery | Soul Jeep Experience - Tenerife Jeep Tours',
-  description: 'Browse our stunning photo gallery showcasing Jeep Wrangler adventures across Tenerife. See Mount Teide, coastal roads, volcanic landscapes, and happy adventurers.',
-  keywords: 'tenerife photos, jeep tour gallery, teide photos, coastal tours tenerife, adventure photography',
+  title: 'Galería de Fotos | Soul Jeep Experience - Tours en Jeep en Tenerife',
+  description: 'Explora nuestra galería de fotos con aventuras en Jeep Wrangler por Tenerife. Descubre el Monte Teide, carreteras costeras, paisajes volcánicos y aventureros felices.',
+  keywords: 'fotos tenerife, galería jeep tour, fotos teide, tours costa tenerife, fotografía aventura',
   openGraph: {
-    title: 'Photo Gallery - Soul Jeep Experience',
-    description: 'Stunning photos from our Jeep Wrangler adventures across Tenerife. Mount Teide, coastal roads, and volcanic landscapes.',
+    title: 'Galería de Fotos - Soul Jeep Experience',
+    description: 'Fotos espectaculares de nuestras aventuras en Jeep Wrangler por Tenerife. Monte Teide, carreteras costeras y paisajes volcánicos.',
     url: 'https://www.souljeep.com/gallery',
     images: ['/images/og-image.jpg'],
   },
