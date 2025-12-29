@@ -83,22 +83,22 @@ export default async function TourDetailPage({ params }: PageProps) {
   // Map tour slug to video
   const tourVideoMap: Record<string, { src: string; poster: string }> = {
     'teide-sunset': {
-      src: '/videos/hero/teide-landscape.mp4',
-      poster: '/videos/hero/teide-landscape-poster.jpg'
+      src: '/videos/hero/curvando-compressed.mp4',
+      poster: '/videos/hero/curvando-poster.jpg'
     },
     'teide-by-day': {
-      src: '/videos/hero/ready-for-adventure.mp4',
-      poster: '/videos/hero/ready-for-adventure-poster.jpg'
+      src: '/videos/hero/guida-compressed.mp4',
+      poster: '/videos/hero/guida-poster.jpg'
     },
     'coastal-tour': {
-      src: '/videos/hero/dynamic-clip.mp4',
-      poster: '/videos/hero/dynamic-clip-poster.jpg'
+      src: '/videos/hero/coastal-compressed.mp4',
+      poster: '/videos/hero/coastal-poster.jpg'
     }
   };
 
   const tourVideo = tourVideoMap[tour.slug] || {
-    src: '/videos/hero/soul-jeep-hero.mp4',
-    poster: '/videos/hero/soul-jeep-hero-poster.jpg'
+    src: '/videos/hero/epic-slow-compressed.mp4',
+    poster: '/videos/hero/epic-slow-poster.jpg'
   };
 
   return (

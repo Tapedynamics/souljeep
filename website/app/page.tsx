@@ -20,14 +20,9 @@ export default async function HomePage() {
   // Hero video carousel slides
   const heroVideos = [
     {
-      src: '/videos/hero/PCV_9108-compressed.mp4',
-      poster: '/videos/hero/PCV_9108-poster.jpg',
+      src: '/videos/hero/epic-slow-compressed.mp4',
+      poster: '/videos/hero/epic-slow-poster.jpg',
       alt: 'Soul Jeep Adventure'
-    },
-    {
-      src: '/videos/hero/PCV_9810-compressed.mp4',
-      poster: '/videos/hero/PCV_9810-poster.jpg',
-      alt: 'Tenerife Jeep Experience'
     },
   ];
 
