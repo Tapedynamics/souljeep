@@ -28,8 +28,8 @@
   "home": {
     "hero": {
       "title": "Descubre Tenerife",
-      "highlightText": "En Tu Propio Jeep",
-      "subtitle": "Aventuras 4x4 Inolvidables a Través de Paisajes Volcánicos",
+      "highlightText": "¡Tú Conduces!",
+      "subtitle": "No eres pasajero, ¡tú llevas el volante! Aventuras 4x4 únicas por paisajes volcánicos.",
       "cta": "Explora Nuestros Tours",
       "premiumExperience": "Experiencia Premium"
     },
@@ -52,7 +52,7 @@
       "title": "Por Qué Elegir Soul Jeep Experience",
       "mainTitle": "Por Qué Elegir",
       "highlight": "Soul Jeep",
-      "subtitle": "No somos solo otra compañía de tours. Te ofrecemos la libertad de explorar a tu ritmo en tu propio Jeep Wrangler.",
+      "subtitle": "A diferencia de otros jeep safari, aquí TÚ CONDUCES. Vive la libertad de explorar Tenerife al volante de un Jeep Wrangler.",
       "reason1Title": "Guías Locales Expertos",
       "reason1Description": "Nuestros guías apasionados conocen cada rincón oculto de Tenerife",
       "reason2Title": "Aventuras Auténticas",
@@ -64,7 +64,7 @@
       "featureDescription": "Experimenta lo mejor de Tenerife con nuestros tours cuidadosamente seleccionados y servicio premium."
     },
     "features": {
-      "feature1": "Conduce Tu Propio Jeep Wrangler",
+      "feature1": "Tú al Volante del Jeep Wrangler",
       "feature2": "Experiencias en Grupos Pequeños",
       "feature3": "Guía Profesional de Ruta",
       "feature4": "Vehículos Completamente Asegurados",
@@ -81,8 +81,8 @@
       "step2Description": "Reserva tu Jeep Wrangler con confirmación instantánea",
       "step3Title": "Recibe Instrucciones",
       "step3Description": "Recibe orientación de ruta e instrucciones de seguridad de nuestro equipo",
-      "step4Title": "¡A la Carretera!",
-      "step4Description": "Conduce tu propio Jeep y explora Tenerife a tu ritmo"
+      "step4Title": "¡Tú Conduces!",
+      "step4Description": "Toma el volante del Jeep Wrangler y explora Tenerife a tu ritmo"
     },
     "cta": {
       "title": "¿Listo para Tu",
@@ -95,7 +95,7 @@
   },
   "tours": {
     "pageTitle": "Nuestros Tours",
-    "pageSubtitle": "Conduce tu propio Jeep Wrangler a través de los paisajes más espectaculares de Tenerife. Elige de nuestra selección curada de aventuras inolvidables.",
+    "pageSubtitle": "Aquí TÚ CONDUCES el Jeep Wrangler por los paisajes más espectaculares de Tenerife. No eres pasajero, ¡eres el protagonista!",
     "heroTitle": "Nuestros",
     "heroHighlight": "Tours",
     "coastalTitle": "Safari Jeep Costero",
