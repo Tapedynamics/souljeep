@@ -5,6 +5,7 @@ export interface Tour {
   subtitle: string;
   description: string;
   duration: string;
+  maxPeople: string;
   price: {
     oneTwo: number;
     three: number;
@@ -34,7 +35,8 @@ export const tours: Tour[] = [
     title: 'Teide Sunset',
     subtitle: 'Magia en el Volcán',
     description: 'Contempla el sol desapareciendo tras el horizonte desde la cima del volcán más alto de Europa. Vive un atardecer único en el Monte Teide, rodeado de colores surrealistas y vistas panorámicas increíbles que te dejarán sin aliento.',
-    duration: '3 horas',
+    duration: '3-4 horas',
+    maxPeople: 'Máximo 4 personas por Jeep',
     price: {
       oneTwo: 220,
       three: 240,
@@ -101,7 +103,8 @@ export const tours: Tour[] = [
     title: 'Teide de Día',
     subtitle: 'Aventura Volcánica',
     description: 'Embárcate en una aventura diurna de 120 km por el Parque Nacional del Teide. Descubre el imponente volcán, navega por serpenteantes carreteras de montaña y experimenta paisajes volcánicos únicos.',
-    duration: '3 horas',
+    duration: '3-4 horas',
+    maxPeople: 'Máximo 4 personas por Jeep',
     price: {
       oneTwo: 220,
       three: 240,
@@ -169,7 +172,8 @@ export const tours: Tour[] = [
     title: 'Tour Costero',
     subtitle: 'Acantilados, Calas y Vistas al Mar',
     description: 'Recorre la espectacular costa sur de Tenerife en tu Jeep Wrangler privado. Descubre los impresionantes acantilados de Los Gigantes, calas escondidas y báñate en las aguas cristalinas del puerto de El Balito.',
-    duration: '3 horas',
+    duration: '3-4 horas',
+    maxPeople: 'Máximo 4 personas por Jeep',
     price: {
       oneTwo: 220,
       three: 240,

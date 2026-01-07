@@ -134,7 +134,7 @@ export default async function TourDetailPage({ params }: PageProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-sunset-gold" />
-                <span className="font-medium">2-4 Personas</span>
+                <span className="font-medium">{tour.maxPeople}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Euro className="w-5 h-5 text-sunset-gold" />

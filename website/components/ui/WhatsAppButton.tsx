@@ -14,7 +14,7 @@ export default function WhatsAppButton() {
     >
       <MessageCircle className="w-6 h-6" />
       <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-stone-gray text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        Chat with us!
+        ¡Escríbenos!
       </span>
     </a>
   );

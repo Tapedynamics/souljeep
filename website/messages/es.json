@@ -125,8 +125,8 @@
     "coastal": {
       "title": "Safari Jeep Costero",
       "description": "Embárcate en un viaje inolvidable a lo largo de la espectacular costa sur de Tenerife. Este tour te lleva a través de escarpados paisajes volcánicos, playas escondidas y pintorescos pueblos pesqueros que muestran la belleza salvaje de la isla.",
-      "duration": "4 horas",
-      "groupSize": "Hasta 6 personas",
+      "duration": "3-4 horas",
+      "groupSize": "Máximo 4 personas por Jeep",
       "difficulty": "Fácil",
       "price": "€75",
       "whatToExpectText": "Tu aventura costera comienza en el punto de encuentro donde te presentaremos a tu guía experimentado y compañeros de aventura. Viajaremos en cómodos vehículos 4x4 a lo largo de carreteras costeras panorámicas, deteniéndonos en miradores impresionantes y playas apartadas. Tendrás tiempo para explorar, tomar fotos y sumergirte en la belleza natural de la costa de Tenerife.",
@@ -148,8 +148,8 @@
     "teide": {
       "title": "Expedición al Parque Nacional del Teide",
       "description": "Aventúrate en el corazón del maravilloso mundo volcánico de Tenerife con nuestro tour del Parque Nacional del Teide. Explora el pico más alto de España y un sitio Patrimonio de la Humanidad de la UNESCO, con paisajes de otro mundo, antiguos flujos de lava y vistas panorámicas que te dejarán sin aliento.",
-      "duration": "6 horas",
-      "groupSize": "Hasta 6 personas",
+      "duration": "3-4 horas",
+      "groupSize": "Máximo 4 personas por Jeep",
       "difficulty": "Moderado",
       "price": "€95",
       "whatToExpectText": "Esta expedición de día completo te lleva a través de múltiples zonas climáticas mientras ascendemos a más de 2,000 metros. Serás testigo de cambios dramáticos en el paisaje y la vegetación, explorarás antiguas formaciones volcánicas y disfrutarás del almuerzo en un lugar panorámico con vistas increíbles. Nuestros guías conocedores compartirán fascinantes conocimientos geológicos e históricos durante todo el viaje.",
@@ -172,8 +172,8 @@
     "sunset": {
       "title": "Experiencia Safari al Atardecer",
       "description": "Experimenta la magia de una puesta de sol en Tenerife desde ubicaciones exclusivas fuera de pista. Este tour vespertino combina aventura y romance mientras viajamos a miradores secretos donde serás testigo del sol pintando el cielo con colores brillantes mientras se pone sobre el Océano Atlántico.",
-      "duration": "3.5 horas",
-      "groupSize": "Hasta 6 personas",
+      "duration": "3-4 horas",
+      "groupSize": "Máximo 4 personas por Jeep",
       "difficulty": "Fácil",
       "price": "€65",
       "whatToExpectText": "A medida que el día llega a su fin, te llevaremos en un viaje panorámico a miradores cuidadosamente seleccionados que ofrecen las vistas más espectaculares del atardecer en la isla. En el camino, disfrutarás de senderos fuera de pista a través del terreno volcánico, y nos detendremos para refrescos mientras observamos el sol descender bajo el horizonte. El tour incluye tiempo para fotografía y relajación en estos impresionantes entornos naturales.",
