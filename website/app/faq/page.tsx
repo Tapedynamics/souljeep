@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Search, ArrowRight, Phone, Mail, MessageCircle, HelpCircle, BookOpen, CreditCard, Cloud } from 'lucide-react';
+import { ChevronDown, Search, ArrowRight, Mail, MessageCircle, HelpCircle, BookOpen, CreditCard, Cloud } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import DynamicHero from '@/components/common/DynamicHero';
@@ -230,16 +230,18 @@ export default function FAQPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Phone */}
+            {/* WhatsApp */}
             <Link
-              href={`tel:${companyInfo.contact.phone}`}
+              href={companyInfo.contact.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-sand-beige rounded-xl p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1 group"
             >
-              <div className="w-14 h-14 rounded-full bg-ocean-blue flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Phone className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 rounded-full bg-adventure-green flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <MessageCircle className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Llámanos</h3>
-              <p className="text-stone-gray mb-2">{companyInfo.contact.phone}</p>
+              <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
+              <p className="text-stone-gray mb-2">Mensajería instantánea</p>
               <p className="text-sm text-stone-gray/70">{companyInfo.contact.phoneHours}</p>
             </Link>
 
@@ -256,21 +258,7 @@ export default function FAQPage() {
               <p className="text-sm text-stone-gray/70">Respuesta en 24h</p>
             </Link>
 
-            {/* WhatsApp */}
-            <Link
-              href={companyInfo.contact.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-sand-beige rounded-xl p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1 group"
-            >
-              <div className="w-14 h-14 rounded-full bg-adventure-green flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <MessageCircle className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-              <p className="text-stone-gray mb-2">Mensajería instantánea</p>
-              <p className="text-sm text-stone-gray/70">Respuestas rápidas</p>
-            </Link>
-          </div>
+            </div>
 
           <div className="text-center mt-8">
             <Link href="/contact">

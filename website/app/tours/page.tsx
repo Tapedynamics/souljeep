@@ -8,7 +8,7 @@ import TourCard from '@/components/tour/TourCard';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
-import { MapPin, Phone, ArrowRight } from 'lucide-react';
+import { MapPin, MessageCircle, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Nuestros Tours - Aventuras en Jeep Wrangler en Tenerife | Soul Jeep Experience',
@@ -160,12 +160,14 @@ export default async function ToursPage() {
               </span>
             </div>
             <div className="flex items-center justify-center gap-2 text-stone-gray">
-              <Phone className="w-5 h-5 text-ocean-blue" />
+              <MessageCircle className="w-5 h-5 text-ocean-blue" />
               <a
-                href={`tel:${companyInfo.contact.phone}`}
+                href={companyInfo.contact.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-ocean-blue transition-colors"
               >
-                {companyInfo.contact.phone}
+                WhatsApp
               </a>
             </div>
           </div>
@@ -191,13 +193,13 @@ export default async function ToursPage() {
                 Reservar Ahora
               </Button>
             </Link>
-            <Link href={`tel:${companyInfo.contact.phone}`}>
+            <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white text-white hover:bg-white hover:text-ocean-blue min-w-[200px]"
               >
-                Llámanos
+                WhatsApp
               </Button>
             </Link>
           </div>

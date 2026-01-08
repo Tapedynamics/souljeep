@@ -31,13 +31,13 @@ export default function FinalCTASection() {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
           </Link>
-          <Link href={`tel:${companyInfo.contact.phone}`}>
+          <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
               variant="secondary"
               size="lg"
               className="bg-white/10 backdrop-blur-md hover:bg-white hover:text-stone-gray border-2 border-white text-white text-lg px-12 py-5 rounded-xl shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              {t('callUs', { phone: companyInfo.contact.phone })}
+              WhatsApp
             </Button>
           </Link>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from 'lucide-react';
+import { MessageCircle, Mail, MapPin, Instagram, Facebook, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import { companyInfo } from '@/data/company';
@@ -63,12 +63,14 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={`tel:${companyInfo.contact.phone}`}
+                  href={companyInfo.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-start gap-2 text-sand-beige hover:text-sunset-orange transition-colors"
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <MessageCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <div>{companyInfo.contact.phone}</div>
+                    <div>WhatsApp</div>
                     <div className="text-xs text-gray-400">{companyInfo.contact.phoneHours}</div>
                   </div>
                 </a>

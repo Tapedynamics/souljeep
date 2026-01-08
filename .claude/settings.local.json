@@ -70,8 +70,7 @@
       "Bash(ping:*)",
       "Bash(npx vercel:*)",
       "Bash(nslookup:*)",
-      "Bash(ls:*)",
-      "Bash(images \")"
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

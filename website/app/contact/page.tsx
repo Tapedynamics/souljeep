@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Instagram, Facebook, ExternalLink, Youtube } from 'lucide-react';
+import { MapPin, MessageCircle, Mail, Clock, Send, CheckCircle, Instagram, Facebook, ExternalLink, Youtube } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import DynamicHero from '@/components/common/DynamicHero';
@@ -119,12 +119,13 @@ export default function ContactPage() {
       linkText: 'Cómo Llegar'
     },
     {
-      icon: Phone,
-      title: 'Llámanos',
-      content: companyInfo.contact.phone,
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      content: 'Mensajería instantánea',
       subContent: `Disponible ${companyInfo.contact.phoneHours}`,
-      link: `tel:${companyInfo.contact.phone}`,
-      linkText: 'Llamar Ahora'
+      link: companyInfo.contact.whatsappLink,
+      linkText: 'Abrir WhatsApp',
+      external: true
     },
     {
       icon: Mail,
@@ -152,8 +153,8 @@ export default function ContactPage() {
       delay: 0.2
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      text: "+34 822 68 45 04",
+      icon: <MessageCircle className="w-6 h-6" />,
+      text: "WhatsApp",
       position: { top: "28%", right: "12%" },
       delay: 0.4
     },
@@ -202,12 +203,12 @@ export default function ContactPage() {
                 {info.link && info.linkText && (
                   <Link
                     href={info.link}
-                    target={info.icon === MapPin ? '_blank' : undefined}
-                    rel={info.icon === MapPin ? 'noopener noreferrer' : undefined}
+                    target={info.icon === MapPin || info.icon === MessageCircle ? '_blank' : undefined}
+                    rel={info.icon === MapPin || info.icon === MessageCircle ? 'noopener noreferrer' : undefined}
                     className="text-sunset-orange hover:text-sunset-gold text-sm font-medium inline-flex items-center gap-1"
                   >
                     {info.linkText}
-                    {info.icon === MapPin && <ExternalLink className="w-3 h-3" />}
+                    {(info.icon === MapPin || info.icon === MessageCircle) && <ExternalLink className="w-3 h-3" />}
                   </Link>
                 )}
               </div>
