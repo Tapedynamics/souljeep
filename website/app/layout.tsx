@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { Inter, Poppins } from 'next/font/google';
+import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
@@ -84,6 +85,19 @@ export default function RootLayout({
       <html lang="es" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
         <head>
           <StructuredData />
+          {/* Google Analytics */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-1GVZR8GLG7"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1GVZR8GLG7');
+            `}
+          </Script>
         </head>
         <body className="antialiased">
           <Header />
