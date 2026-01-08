@@ -26,27 +26,15 @@ export default function Header() {
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group relative">
-            <div className="bg-white rounded-xl px-2 py-1 shadow-lg">
-              <Image
-                src="/images/logo.png"
-                alt="Soul Jeep Experience"
-                width={280}
-                height={80}
-                className="h-14 md:h-16 w-auto object-contain"
-                priority
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const fallback = target.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'block';
-                }}
-              />
-              <div className="hidden text-2xl font-bold">
-                <span className="text-stone-gray">SOUL</span>
-                <span className="text-sunset-orange">JEEP</span>
-              </div>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/logo-transparent.png"
+              alt="Soul Jeep Experience"
+              width={280}
+              height={80}
+              className="h-14 md:h-16 w-auto object-contain drop-shadow-lg"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
