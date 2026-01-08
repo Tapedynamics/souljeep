@@ -1,4 +1,19 @@
 # 🚗 SOUL JEEP WEBSITE - PROGRESS REPORT
+
+---
+
+## Sessione 8 Gennaio 2026
+
+### ✅ Completato
+- [x] **Google Analytics** - Aggiunto tracking G-1GVZR8GLG7 in `app/layout.tsx`
+  - Usa `next/script` con strategy `afterInteractive`
+  - Attivo su tutte le pagine automaticamente
+
+### Commit
+- `3a71983` - Add Google Analytics tracking (G-1GVZR8GLG7)
+
+---
+
 ## Sessione di Sviluppo - 20 Novembre 2025
 
 ---
