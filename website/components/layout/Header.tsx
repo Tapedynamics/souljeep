@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
@@ -56,10 +56,10 @@ export default function Header() {
               href={companyInfo.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white hover:text-sunset-gold transition-colors drop-shadow-lg"
+              className="flex items-center justify-center w-10 h-10 bg-[#25D366] hover:bg-[#128C7E] rounded-full transition-colors shadow-lg"
+              aria-label="Contactar por WhatsApp"
             >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">{companyInfo.contact.phone}</span>
+              <MessageCircle className="w-5 h-5 text-white" />
             </a>
 
             <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -100,10 +100,10 @@ export default function Header() {
                 href={companyInfo.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 text-ocean-blue font-medium"
+                className="flex items-center justify-center gap-2 py-3 bg-[#25D366] hover:bg-[#128C7E] text-white font-medium rounded-lg transition-colors"
               >
-                <Phone className="w-4 h-4" />
-                {companyInfo.contact.phone}
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp
               </a>
               <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="md" className="w-full">

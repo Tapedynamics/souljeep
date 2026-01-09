@@ -150,13 +150,17 @@ export default function ContactPage() {
       icon: <MapPin className="w-6 h-6" />,
       text: "Costa Adeje, Tenerife",
       position: { top: "18%", left: "10%" },
-      delay: 0.2
+      delay: 0.2,
+      href: `https://www.google.com/maps?q=${companyInfo.location.coordinates.lat},${companyInfo.location.coordinates.lng}`,
+      external: true
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
       text: "WhatsApp",
       position: { top: "28%", right: "12%" },
-      delay: 0.4
+      delay: 0.4,
+      href: companyInfo.contact.whatsappLink,
+      external: true
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -168,7 +172,9 @@ export default function ContactPage() {
       icon: <Mail className="w-6 h-6" />,
       text: "Respuesta Rápida",
       position: { bottom: "32%", right: "10%" },
-      delay: 0.8
+      delay: 0.8,
+      href: `mailto:${companyInfo.contact.email}`,
+      external: true
     },
   ];
 

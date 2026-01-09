@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
 
 interface FloatingCard {
@@ -16,6 +17,8 @@ interface FloatingCard {
   };
   delay?: number;
   color?: string;
+  href?: string;
+  external?: boolean;
 }
 
 interface DynamicHeroProps {
@@ -94,38 +97,59 @@ export default function DynamicHero({
       />
 
       {/* Floating Cards */}
-      {floatingCards.map((card, index) => (
-        <motion.div
-          key={index}
-          className={`absolute hidden lg:flex items-center gap-3 ${card.color || 'bg-white/10'} backdrop-blur-md rounded-2xl px-6 py-4 shadow-2xl border border-white/20`}
-          style={card.position}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{
-            opacity: 1,
-            y: [0, -15, 0],
-          }}
-          transition={{
-            opacity: { delay: card.delay || 0, duration: 0.6 },
-            y: {
-              delay: card.delay || 0,
-              duration: 3 + index,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }
-          }}
-        >
-          {card.icon && (
-            <div className="text-sunset-gold">
-              {card.icon}
-            </div>
-          )}
-          {card.text && (
-            <span className="text-white font-medium text-sm md:text-base whitespace-nowrap">
-              {card.text}
-            </span>
-          )}
-        </motion.div>
-      ))}
+      {floatingCards.map((card, index) => {
+        const cardContent = (
+          <>
+            {card.icon && (
+              <div className="text-sunset-gold">
+                {card.icon}
+              </div>
+            )}
+            {card.text && (
+              <span className="text-white font-medium text-sm md:text-base whitespace-nowrap">
+                {card.text}
+              </span>
+            )}
+          </>
+        );
+
+        const cardClasses = `absolute hidden lg:flex items-center gap-3 ${card.color || 'bg-white/10'} backdrop-blur-md rounded-2xl px-6 py-4 shadow-2xl border border-white/20 ${card.href ? 'cursor-pointer hover:bg-white/20 hover:scale-105 transition-all' : ''}`;
+
+        return (
+          <motion.div
+            key={index}
+            className={cardClasses}
+            style={card.position}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: [0, -15, 0],
+            }}
+            transition={{
+              opacity: { delay: card.delay || 0, duration: 0.6 },
+              y: {
+                delay: card.delay || 0,
+                duration: 3 + index,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }
+            }}
+          >
+            {card.href ? (
+              <Link
+                href={card.href}
+                target={card.external ? '_blank' : undefined}
+                rel={card.external ? 'noopener noreferrer' : undefined}
+                className="flex items-center gap-3"
+              >
+                {cardContent}
+              </Link>
+            ) : (
+              cardContent
+            )}
+          </motion.div>
+        );
+      })}
 
       {/* Content */}
       <Container className="relative z-10 text-center">
