@@ -28,11 +28,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
-              src="/images/logo-transparent.png"
+              src="/images/logo.png"
               alt="Soul Jeep Experience"
               width={280}
               height={80}
-              className="h-14 md:h-16 w-auto object-contain drop-shadow-lg"
+              className="h-14 md:h-16 w-auto object-contain rounded-lg"
               priority
             />
           </Link>
