@@ -2,15 +2,30 @@
 
 ---
 
-## Sessione 8 Gennaio 2026
+## Sessione 9 Gennaio 2026
 
 ### ✅ Completato
 - [x] **Google Analytics** - Aggiunto tracking G-1GVZR8GLG7 in `app/layout.tsx`
   - Usa `next/script` con strategy `afterInteractive`
   - Attivo su tutte le pagine automaticamente
 
+- [x] **WhatsApp come unico contatto** - Sostituiti tutti i link `tel:` con WhatsApp
+  - Footer → WhatsApp
+  - FinalCTASection (Homepage) → WhatsApp
+  - Tours page (2 punti) → WhatsApp
+  - FAQ page → WhatsApp
+  - Contact page → WhatsApp
+
+- [x] **Logo header aggiornato** - Nuovo logo `soul jeep.png` con sfondo bianco
+  - Rimosso logo trasparente (non piaceva)
+  - File: `/public/images/logo.png`
+
 ### Commit
 - `3a71983` - Add Google Analytics tracking (G-1GVZR8GLG7)
+- `3621ec3` - Update progress report
+- `c8cc2ef` - Replace all phone/tel links with WhatsApp contact
+- `b0e3cda` - Use transparent logo in header (reverted)
+- `b1f9029` - Use logo with white background in header
 
 ---
 
