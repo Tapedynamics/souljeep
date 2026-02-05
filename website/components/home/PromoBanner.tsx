@@ -66,7 +66,7 @@ export default function PromoBanner() {
                       <Users className="w-8 h-8 text-adventure-green" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg text-charcoal">4 personas</p>
+                      <p className="font-bold text-lg text-black">4 personas</p>
                       <p className="text-sm text-stone-gray">Por Jeep</p>
                     </div>
                   </div>
@@ -81,7 +81,7 @@ export default function PromoBanner() {
                   <div className="flex items-center gap-3">
                     <Users className="w-8 h-8 text-ocean-blue" />
                     <div>
-                      <p className="font-bold text-lg text-charcoal">3 personas</p>
+                      <p className="font-bold text-lg text-black">3 personas</p>
                       <p className="text-sm text-stone-gray">Por Jeep</p>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export default function PromoBanner() {
 
               {/* Includes */}
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <p className="text-sm font-semibold text-charcoal mb-2">Incluye:</p>
+                <p className="text-sm font-semibold text-black mb-2">Incluye:</p>
                 <ul className="text-sm text-stone-gray space-y-1">
                   <li className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-adventure-green" />
