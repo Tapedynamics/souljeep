@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Shield, Users, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
+import PromoBanner from '@/components/home/PromoBanner';
 import { companyInfo } from '@/data/company';
 
 export default function HeroContent() {
@@ -20,7 +21,7 @@ export default function HeroContent() {
         <p className="text-xl md:text-2xl mb-8 text-sand-beige max-w-3xl mx-auto leading-relaxed">
           {t('hero.subtitle')}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <Link href={companyInfo.fareharbor.bookingUrl} target="_blank" rel="noopener noreferrer">
             <Button
               variant="primary"
@@ -40,6 +41,11 @@ export default function HeroContent() {
               {t('hero.cta')}
             </Button>
           </Link>
+        </div>
+
+        {/* Promo Banner - Febbraio */}
+        <div className="flex justify-center mb-8">
+          <PromoBanner />
         </div>
 
         {/* Trust Indicators */}
