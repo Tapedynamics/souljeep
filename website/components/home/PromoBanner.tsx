@@ -37,7 +37,7 @@ export default function PromoBanner() {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in"
           onClick={() => setIsModalOpen(false)}
         >
           <div
@@ -48,7 +48,7 @@ export default function PromoBanner() {
             <div className="bg-gradient-to-r from-sunset-orange via-red-500 to-sunset-gold p-6 text-white text-center">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 left-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-[10000]"
+                className="absolute top-4 left-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
