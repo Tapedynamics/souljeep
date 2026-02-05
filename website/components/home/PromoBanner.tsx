@@ -46,12 +46,6 @@ export default function PromoBanner() {
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-sunset-orange via-red-500 to-sunset-gold p-6 text-white text-center">
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 left-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
               <Sparkles className="w-10 h-10 mx-auto mb-2" />
               <h3 className="text-2xl font-bold">PROMO FEBRERO</h3>
               <p className="text-white/90 mt-1">Oferta especial por tiempo limitado</p>
@@ -137,6 +131,15 @@ export default function PromoBanner() {
               <p className="text-xs text-center text-stone-gray mt-3">
                 * Oferta válida durante febrero 2026
               </p>
+
+              {/* Close button - mobile friendly */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="w-full mt-4 py-3 px-6 border-2 border-stone-gray/20 text-stone-gray font-semibold rounded-xl hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <X className="w-5 h-5" />
+                Cerrar
+              </button>
             </div>
           </div>
         </div>
