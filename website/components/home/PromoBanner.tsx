@@ -36,9 +36,9 @@ export default function PromoBanner() {
             <div className="bg-gradient-to-r from-sunset-orange via-red-500 to-sunset-gold p-6 text-white text-center">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 p-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+                className="absolute top-4 left-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-[10000]"
               >
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </button>
               <Sparkles className="w-10 h-10 mx-auto mb-2" />
               <h3 className="text-2xl font-bold">PROMO FEBRERO</h3>
