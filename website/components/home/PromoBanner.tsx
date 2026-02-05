@@ -111,7 +111,7 @@ export default function PromoBanner() {
 
               {/* CTA - WhatsApp con messaggio promo */}
               <a
-                href="https://wa.me/34822684504?text=Hola!%20Me%20interesa%20la%20PROMO%20FEBRERO%20de%2050%E2%82%AC%2Fpersona.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20para%20reservar."
+                href="https://wa.me/34614475604?text=Hola!%20Me%20interesa%20la%20PROMO%20FEBRERO%20de%2050%E2%82%AC%2Fpersona.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20para%20reservar."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full mt-6"
