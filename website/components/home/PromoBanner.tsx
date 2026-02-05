@@ -1,10 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Sparkles, Users, Check } from 'lucide-react';
 
 export default function PromoBanner() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Block body scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isModalOpen]);
 
   return (
     <>
