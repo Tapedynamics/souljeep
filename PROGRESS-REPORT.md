@@ -2,6 +2,30 @@
 
 ---
 
+## Sessione 19 Febbraio 2026
+
+### ✅ Completato
+- [x] **Nascosti tour Teide de Día e Costero** - Solo il Teide Sunset resta visibile sul sito
+  - Aggiunto campo `visible: boolean` all'interfaccia `Tour` in `data/tours.ts`
+  - `teide-sunset`: `visible: true` | `teide-by-day` e `coastal-tour`: `visible: false`
+  - Aggiunto helper `getVisibleTours()` e aggiornato `getFeaturedTours()` per filtrare per visibilità
+  - Homepage mostra solo 1 tour card (Teide Sunset)
+  - Pagina `/tours` mostra solo sezione Teide con il sunset tour
+  - `/tours/teide-by-day` e `/tours/coastal-tour` restituiscono 404
+  - `generateMetadata()` non genera metadata SEO per tour nascosti
+  - `generateStaticParams()` genera solo la pagina sunset
+  - Sitemap include solo `/tours/teide-sunset`
+  - Rimosso bottone "Explorar Otros Tours" dalla pagina dettaglio tour
+  - Gallery invariata (mostra tutte le foto di paesaggio indipendentemente dai tour)
+
+### Come riattivare i tour
+Cambiare `visible: false` → `visible: true` in `data/tours.ts` per i tour desiderati. Zero altre modifiche necessarie.
+
+### Commit
+- `1e73b0a` - Hide all tours except Teide Sunset from the website
+
+---
+
 ## Sessione 9 Gennaio 2026
 
 ### ✅ Completato
