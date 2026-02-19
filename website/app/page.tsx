@@ -9,13 +9,13 @@ import FeaturedToursCTA from '@/components/home/FeaturedToursCTA';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import FinalCTASection from '@/components/home/FinalCTASection';
-import { tours } from '@/data/tours';
+import { getFeaturedTours } from '@/data/tours';
 
 export default async function HomePage() {
   // Get translations for the current locale
   const t = await getTranslations('home');
   const tCommon = await getTranslations('common');
-  const featuredTours = tours.filter(tour => tour.featured);
+  const featuredTours = getFeaturedTours();
 
   // Hero video carousel slides
   const heroVideos = [

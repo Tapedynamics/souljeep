@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { tours } from '@/data/tours';
+import { getVisibleTours } from '@/data/tours';
 import { companyInfo } from '@/data/company';
 import TourCard from '@/components/tour/TourCard';
 import Button from '@/components/ui/Button';
@@ -24,9 +24,10 @@ export const metadata: Metadata = {
 export default async function ToursPage() {
   const t = await getTranslations('tours');
   const tCommon = await getTranslations('common');
-  const teideTours = tours.filter(tour => tour.category === 'teide');
-  const coastalTours = tours.filter(tour => tour.category === 'coastal');
-  const adventureTours = tours.filter(tour => tour.category === 'adventure');
+  const visibleTours = getVisibleTours();
+  const teideTours = visibleTours.filter(tour => tour.category === 'teide');
+  const coastalTours = visibleTours.filter(tour => tour.category === 'coastal');
+  const adventureTours = visibleTours.filter(tour => tour.category === 'adventure');
 
   return (
     <div className="bg-white">

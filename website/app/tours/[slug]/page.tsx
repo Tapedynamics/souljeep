@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { getTourBySlug, tours } from '@/data/tours';
+import { getTourBySlug, getVisibleTours } from '@/data/tours';
 import { faq } from '@/data/company';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
@@ -25,9 +25,9 @@ interface PageProps {
   }>;
 }
 
-// Generate static params for all tours
+// Generate static params for visible tours only
 export async function generateStaticParams() {
-  return tours.map((tour) => ({
+  return getVisibleTours().map((tour) => ({
     slug: tour.slug,
   }));
 }
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const tour = getTourBySlug(slug);
 
-  if (!tour) {
+  if (!tour || !tour.visible) {
     return {
       title: 'Tour No Encontrado',
     };
@@ -73,7 +73,7 @@ export default async function TourDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const tour = getTourBySlug(slug);
 
-  if (!tour) {
+  if (!tour || !tour.visible) {
     notFound();
   }
 
@@ -436,15 +436,6 @@ export default async function TourDetailPage({ params }: PageProps) {
               >
                 Reservar Ahora
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link href="/tours">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-sunset-orange min-w-[200px]"
-              >
-                Explorar Otros Tours
               </Button>
             </Link>
           </div>

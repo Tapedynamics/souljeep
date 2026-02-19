@@ -26,6 +26,7 @@ export interface Tour {
   };
   category: 'teide' | 'coastal' | 'adventure';
   featured: boolean;
+  visible: boolean;
 }
 
 export const tours: Tour[] = [
@@ -95,7 +96,8 @@ export const tours: Tour[] = [
       ]
     },
     category: 'teide',
-    featured: true
+    featured: true,
+    visible: true
   },
   {
     id: '2',
@@ -164,7 +166,8 @@ export const tours: Tour[] = [
       ]
     },
     category: 'teide',
-    featured: true
+    featured: true,
+    visible: false
   },
   {
     id: '3',
@@ -238,7 +241,8 @@ export const tours: Tour[] = [
       ]
     },
     category: 'coastal',
-    featured: true
+    featured: true,
+    visible: false
   }
 ];
 
@@ -246,6 +250,10 @@ export const getTourBySlug = (slug: string): Tour | undefined => {
   return tours.find(tour => tour.slug === slug);
 };
 
+export const getVisibleTours = (): Tour[] => {
+  return tours.filter(tour => tour.visible);
+};
+
 export const getFeaturedTours = (): Tour[] => {
-  return tours.filter(tour => tour.featured);
+  return tours.filter(tour => tour.featured && tour.visible);
 };

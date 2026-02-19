@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { tours } from '@/data/tours';
+import { getVisibleTours } from '@/data/tours';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.souljeep.com';
@@ -44,8 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic tour pages
-  const tourPages: MetadataRoute.Sitemap = tours.map((tour) => ({
+  // Dynamic tour pages (only visible tours)
+  const tourPages: MetadataRoute.Sitemap = getVisibleTours().map((tour) => ({
     url: `${baseUrl}/tours/${tour.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
