@@ -27,7 +27,7 @@ export default function PromoBanner() {
       >
         <Sparkles className="w-5 h-5 animate-bounce" />
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-          <span className="font-bold text-lg">FEBRUARY PROMO</span>
+          <span className="font-bold text-lg">MARCH PROMO</span>
           <span className="text-white/90">From <span className="font-black text-2xl">50€</span>/person</span>
         </div>
         <span className="text-sm text-white/80 hidden sm:inline">· Click for more info</span>
@@ -47,7 +47,7 @@ export default function PromoBanner() {
             {/* Header */}
             <div className="bg-gradient-to-r from-sunset-orange via-red-500 to-sunset-gold p-3 text-white text-center">
               <Sparkles className="w-7 h-7 mx-auto mb-1" />
-              <h3 className="text-xl font-bold">FEBRUARY PROMO</h3>
+              <h3 className="text-xl font-bold">MARCH PROMO</h3>
               <p className="text-white/90 text-sm">Limited time special offer</p>
             </div>
 
@@ -115,7 +115,7 @@ export default function PromoBanner() {
 
               {/* CTA - WhatsApp with promo message */}
               <a
-                href="https://wa.me/34614475604?text=Hi!%20I'm%20interested%20in%20the%20FEBRUARY%20PROMO%20at%2050%E2%82%AC%2Fperson.%20I'd%20like%20more%20info%20to%20book."
+                href="https://wa.me/34614475604?text=Hi!%20I'm%20interested%20in%20the%20MARCH%20PROMO%20at%2050%E2%82%AC%2Fperson.%20I'd%20like%20more%20info%20to%20book."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full mt-3"
@@ -127,7 +127,7 @@ export default function PromoBanner() {
               </a>
 
               <p className="text-[10px] text-center text-stone-gray mt-2">
-                * Offer valid during February 2026
+                * Offer valid during March 2026
               </p>
 
               {/* Close button - mobile friendly */}

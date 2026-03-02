@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Section from '@/components/ui/Section';
 import TourCard from '@/components/tour/TourCard';
+import FeaturedTourWide from '@/components/tour/FeaturedTourWide';
 import VideoCarousel from '@/components/common/VideoCarousel';
 import AnimatedSection from '@/components/common/AnimatedSection';
 import HeroContent from '@/components/home/HeroContent';
@@ -20,8 +21,8 @@ export default async function HomePage() {
   // Hero video carousel slides
   const heroVideos = [
     {
-      src: '/videos/hero/epic-slow-compressed.mp4',
-      poster: '/videos/hero/epic-slow-poster.jpg',
+      src: '/videos/hero/coastal-home-compressed.mp4',
+      poster: '/videos/hero/coastal-home-poster.jpg',
       alt: 'Soul Jeep Adventure'
     },
   ];
@@ -51,10 +52,14 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className={`mb-12 ${featuredTours.length === 1 ? 'max-w-4xl mx-auto' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'}`}>
           {featuredTours.map((tour, index) => (
             <AnimatedSection key={tour.id} animation="fadeUp" delay={index * 0.15}>
-              <TourCard tour={tour} />
+              {featuredTours.length === 1 ? (
+                <FeaturedTourWide tour={tour} />
+              ) : (
+                <TourCard tour={tour} />
+              )}
             </AnimatedSection>
           ))}
         </div>
