@@ -1,0 +1,46 @@
+name: Generate Weekly Blog Article
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate articles
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node website/scripts/generate-article.mjs
+
+      - name: Check for new articles
+        id: check
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "Soul Jeep Blog Bot"
+          git config user.email "blog-bot@souljeep.com"
+          git add website/data/blog/articles/
+          git commit -m "blog: auto-generate weekly SEO article $(date +%Y-%m-%d)"
+          git push

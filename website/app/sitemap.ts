@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getVisibleTours } from '@/data/tours';
+import { getAllArticles } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.souljeep.com';
@@ -52,5 +53,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...tourPages];
+  // Blog pages
+  const blogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    ...getAllArticles().map((article) => ({
+      url: `${baseUrl}/blog/${article.slug}`,
+      lastModified: new Date(article.updatedAt || article.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return [...staticPages, ...tourPages, ...blogPages];
 }
