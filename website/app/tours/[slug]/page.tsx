@@ -7,6 +7,8 @@ import { faq } from '@/data/company';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import VideoHero from '@/components/common/VideoHero';
+import { companyInfo } from '@/data/company';
+import StickyBookingBar from '@/components/tour/StickyBookingBar';
 import {
   Clock,
   Users,
@@ -16,7 +18,8 @@ import {
   MapPin,
   AlertCircle,
   ChevronDown,
-  Calendar
+  Calendar,
+  MessageCircle
 } from 'lucide-react';
 
 interface PageProps {
@@ -101,6 +104,30 @@ export default async function TourDetailPage({ params }: PageProps) {
     poster: '/videos/hero/epic-slow-poster.jpg'
   };
 
+  // Extra gallery photos per tour (inline tra sezioni)
+  const tourExtraPhotos: Record<string, string[]> = {
+    'teide-sunset': [
+      '/images/gallery/teide/IMG_20251101_165300.jpg',
+      '/images/gallery/teide/IMG_20251101_172543.jpg',
+      '/images/gallery/teide/IMG_20251101_165445.jpg',
+      '/images/gallery/teide/IMG_20251101_165825.jpg',
+    ],
+    'teide-by-day': [
+      '/images/gallery/teide/IMG_20251101_164358.jpg',
+      '/images/gallery/teide/IMG_20251101_165233.jpg',
+      '/images/gallery/teide/IMG_20251101_170118.jpg',
+      '/images/gallery/teide/IMG_20251101_170236.jpg',
+    ],
+    'coastal-tour': [
+      '/images/gallery/coastal/IMG20250913131122.jpg',
+      '/images/gallery/coastal/IMG20250913134803.jpg',
+      '/images/gallery/coastal/IMG20250913135320.jpg',
+      '/images/gallery/coastal/IMG20250913142629.jpg',
+    ],
+  };
+
+  const extraPhotos = tourExtraPhotos[tour.slug] || [];
+
   return (
     <div className="bg-white">
       {/* Hero Section with Video */}
@@ -150,6 +177,12 @@ export default async function TourDetailPage({ params }: PageProps) {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
+              <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" className="bg-[#25D366]/20 backdrop-blur-sm border-[#25D366] text-white hover:bg-[#25D366] min-w-[200px] group">
+                  <MessageCircle className="mr-2 w-5 h-5" />
+                  WhatsApp
+                </Button>
+              </Link>
               <a href="#itinerary">
                 <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-stone-gray min-w-[200px]">
                   Ver Itinerario
@@ -194,6 +227,27 @@ export default async function TourDetailPage({ params }: PageProps) {
           </div>
         </Container>
       </section>
+
+      {/* Inline Photo Strip */}
+      {extraPhotos.length > 0 && (
+        <section className="py-8 bg-white">
+          <Container size="lg">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {extraPhotos.map((src, index) => (
+                <div key={index} className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+                  <Image
+                    src={src}
+                    alt={`${tour.title} - Foto ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Itinerary Section */}
       <section id="itinerary" className="py-16 bg-white">
@@ -288,11 +342,17 @@ export default async function TourDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link href={tour.fareharbor} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg" className="group">
                 Ver Disponibilidad
                 <Calendar className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+              </Button>
+            </Link>
+            <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white group">
+                <MessageCircle className="mr-2 w-5 h-5" />
+                Consultar por WhatsApp
               </Button>
             </Link>
           </div>
@@ -438,6 +498,16 @@ export default async function TourDetailPage({ params }: PageProps) {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
+            <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-[#25D366] min-w-[200px] group"
+              >
+                <MessageCircle className="mr-2 w-5 h-5" />
+                WhatsApp
+              </Button>
+            </Link>
           </div>
 
           <div className="flex items-center justify-center gap-2 text-white/90">
@@ -446,6 +516,13 @@ export default async function TourDetailPage({ params }: PageProps) {
           </div>
         </Container>
       </section>
+
+      {/* Sticky Booking Bar - Mobile */}
+      <StickyBookingBar
+        bookingUrl={tour.fareharbor}
+        whatsappUrl={companyInfo.contact.whatsappLink}
+        price={tour.price.oneTwo}
+      />
     </div>
   );
 }

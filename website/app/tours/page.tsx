@@ -8,7 +8,7 @@ import TourCard from '@/components/tour/TourCard';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
-import { MapPin, MessageCircle, ArrowRight } from 'lucide-react';
+import { MapPin, MessageCircle, ArrowRight, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Nuestros Tours - Aventuras en Jeep Wrangler en Tenerife | Soul Jeep Experience',
@@ -189,18 +189,20 @@ export default async function ToursPage() {
               <Button
                 variant="primary"
                 size="lg"
-                className="bg-sunset-orange hover:bg-sunset-gold min-w-[200px]"
+                className="bg-sunset-orange hover:bg-sunset-gold min-w-[200px] group"
               >
                 Reservar Ahora
+                <Calendar className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               </Button>
             </Link>
             <Link href={companyInfo.contact.whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-ocean-blue min-w-[200px]"
+                className="border-2 border-[#25D366] text-white hover:bg-[#25D366] min-w-[200px] group"
               >
-                WhatsApp
+                <MessageCircle className="mr-2 w-5 h-5" />
+                Escríbenos por WhatsApp
               </Button>
             </Link>
           </div>

@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header id="site-header" className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
