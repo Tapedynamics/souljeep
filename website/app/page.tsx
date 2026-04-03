@@ -23,11 +23,6 @@ export default async function HomePage() {
   // Hero video carousel slides
   const heroVideos = [
     {
-      src: '/videos/hero/curvando-compressed.mp4',
-      poster: '/videos/hero/curvando-poster.jpg',
-      alt: 'Soul Jeep Experience Tenerife'
-    },
-    {
       src: '/videos/hero/teide-landscape.mp4',
       poster: '/videos/hero/teide-landscape-poster.jpg',
       alt: 'Paisajes volcánicos del Teide'
