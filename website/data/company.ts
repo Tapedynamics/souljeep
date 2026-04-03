@@ -8,7 +8,7 @@ export const companyInfo = {
     phoneHours: '9:00 - 22:00',
     email: 'greattripstenerife@gmail.com',
     whatsapp: '+34 822 68 45 04',
-    whatsappLink: 'https://wa.me/message/AJX3XAGZC7ZBO1',
+    whatsappLink: 'https://wa.me/34822684504?text=%C2%A1Hola%21%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20info%20sobre%20el%20Tour%20Sunset%20al%20Teide.%20%C2%BFCu%C3%A1l%20es%20el%20mejor%20precio%3F',
   },
 
   location: {
