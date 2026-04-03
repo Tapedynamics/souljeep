@@ -105,22 +105,23 @@ export default async function TourDetailPage({ params }: PageProps) {
   };
 
   // Extra gallery photos per tour (inline tra sezioni)
+  // Extra gallery photos per tour - solo landscape per evitare stretching
   const tourExtraPhotos: Record<string, string[]> = {
     'teide-sunset': [
       '/images/gallery/teide/IMG_20251101_165300.jpg',
-      '/images/gallery/teide/IMG_20251101_172543.jpg',
-      '/images/gallery/teide/IMG_20251101_165445.jpg',
-      '/images/gallery/teide/IMG_20251101_165825.jpg',
+      '/images/gallery/teide/IMG_20251101_165910.jpg',
+      '/images/gallery/teide/IMG_20251101_171624.jpg',
+      '/images/gallery/teide/IMG20250804203821.jpg',
     ],
     'teide-by-day': [
-      '/images/gallery/teide/IMG_20251101_164358.jpg',
       '/images/gallery/teide/IMG_20251101_165233.jpg',
-      '/images/gallery/teide/IMG_20251101_170118.jpg',
-      '/images/gallery/teide/IMG_20251101_170236.jpg',
+      '/images/gallery/teide/IMG_20251101_165503.jpg',
+      '/images/gallery/teide/IMG_20251101_165549.jpg',
+      '/images/gallery/teide/IMG_20251101_172602.jpg',
     ],
     'coastal-tour': [
-      '/images/gallery/coastal/IMG20250913131122.jpg',
-      '/images/gallery/coastal/IMG20250913134803.jpg',
+      '/images/gallery/coastal/IMG20250913134819.jpg',
+      '/images/gallery/coastal/IMG20250913134839.jpg',
       '/images/gallery/coastal/IMG20250913135320.jpg',
       '/images/gallery/coastal/IMG20250913142629.jpg',
     ],

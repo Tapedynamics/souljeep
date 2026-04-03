@@ -112,9 +112,9 @@ export default function InstagramLanding() {
         <div className="max-w-lg mx-auto grid grid-cols-2 gap-3">
           {[
             '/images/gallery/teide/IMG_20251101_165300.jpg',
-            '/images/gallery/coastal/IMG20250913131122.jpg',
-            '/images/gallery/teide/IMG_20251101_172543.jpg',
-            '/images/gallery/coastal/IMG20250913134803.jpg',
+            '/images/gallery/coastal/IMG20250913134819.jpg',
+            '/images/gallery/teide/IMG20250804203815.jpg',
+            '/images/gallery/coastal/IMG20250913135320.jpg',
           ].map((src, i) => (
             <div key={i} className="relative h-40 rounded-xl overflow-hidden">
               <Image src={src} alt={`Soul Jeep ${i + 1}`} fill className="object-cover" sizes="50vw" />

@@ -23,8 +23,8 @@ export default async function HomePage() {
   // Hero video carousel slides
   const heroVideos = [
     {
-      src: '/videos/hero/soul-jeep-hero.mp4',
-      poster: '/videos/hero/soul-jeep-hero-poster.jpg',
+      src: '/videos/hero/curvando-compressed.mp4',
+      poster: '/videos/hero/curvando-poster.jpg',
       alt: 'Soul Jeep Experience Tenerife'
     },
     {
@@ -95,10 +95,10 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
             {[
               { src: '/images/gallery/teide/IMG_20251101_165300.jpg', alt: 'Jeep en el Teide' },
-              { src: '/images/gallery/coastal/IMG20250913131122.jpg', alt: 'Costa de Tenerife' },
-              { src: '/images/gallery/teide/IMG_20251101_172543.jpg', alt: 'Paisaje volcánico' },
-              { src: '/images/gallery/coastal/IMG20250913134803.jpg', alt: 'Aventura costera' },
-              { src: '/images/gallery/teide/IMG_20251101_165445.jpg', alt: 'Atardecer Teide' },
+              { src: '/images/gallery/coastal/IMG20250913134819.jpg', alt: 'Costa de Tenerife' },
+              { src: '/images/gallery/teide/IMG_20251101_165910.jpg', alt: 'Paisaje volcánico' },
+              { src: '/images/gallery/coastal/IMG20250913142629.jpg', alt: 'Aventura costera' },
+              { src: '/images/gallery/teide/IMG20250804203815.jpg', alt: 'Atardecer Teide' },
               { src: '/images/gallery/coastal/IMG20250913135320.jpg', alt: 'Vistas al mar' },
             ].map((photo, index) => (
               <div key={index} className="relative h-40 md:h-48 overflow-hidden rounded-lg group">
