@@ -12,7 +12,6 @@ import FeaturedToursCTA from '@/components/home/FeaturedToursCTA';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import FinalCTASection from '@/components/home/FinalCTASection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import { getFeaturedTours } from '@/data/tours';
 
 export default async function HomePage() {
@@ -118,11 +117,6 @@ export default async function HomePage() {
       {/* Stats Section */}
       <Section padding="lg" className="bg-ocean-blue text-white">
         <StatsSection />
-      </Section>
-
-      {/* Reviews — Google Reviews live */}
-      <Section background="white" padding="xl">
-        <ReviewsSection />
       </Section>
 
       {/* Why Choose Us */}
