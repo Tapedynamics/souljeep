@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Sparkles, Users, Check } from 'lucide-react';
+import { companyInfo } from '@/data/company';
 
 export default function PromoBanner() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -113,9 +114,9 @@ export default function PromoBanner() {
                 </ul>
               </div>
 
-              {/* CTA - WhatsApp with promo message */}
+              {/* CTA - WhatsApp */}
               <a
-                href="https://wa.me/34614475604?text=Hi!%20I'm%20interested%20in%20the%20MARCH%20PROMO%20at%2050%E2%82%AC%2Fperson.%20I'd%20like%20more%20info%20to%20book."
+                href={companyInfo.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full mt-3"

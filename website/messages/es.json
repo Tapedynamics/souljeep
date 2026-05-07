@@ -50,6 +50,12 @@
       "satisfaction": "Tasa de Satisfacción",
       "rating": "Calificación Promedio"
     },
+    "reviews": {
+      "badge": "Reseñas en Google",
+      "title": "Lo Que Dicen Nuestros Aventureros",
+      "basedOn": "{count, plural, one {basado en # reseña} other {basado en # reseñas}}",
+      "viewAll": "Ver todas las reseñas en Google"
+    },
     "whyChooseUs": {
       "title": "Por Qué Elegir Soul Jeep Experience",
       "mainTitle": "Por Qué Elegir",
