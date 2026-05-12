@@ -168,6 +168,12 @@ export default async function TourDetailPage({ params }: PageProps) {
                 <Euro className="w-5 h-5 text-sunset-gold" />
                 <span className="font-medium">Desde €{tour.price.oneTwo}</span>
               </div>
+              {tour.availability && (
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-sunset-gold" />
+                  <span className="font-medium">{tour.availability.days} · {tour.availability.timeSlot}</span>
+                </div>
+              )}
             </div>
 
             {/* Primary CTA */}
@@ -261,6 +267,22 @@ export default async function TourDetailPage({ params }: PageProps) {
               Un recorrido detallado de tu aventura de {tour.duration}
             </p>
           </div>
+
+          {tour.availability && (
+            <div className="max-w-3xl mx-auto mb-12">
+              <div className="flex items-center gap-4 rounded-xl bg-gradient-to-r from-ocean-blue/10 to-sunset-gold/10 border border-ocean-blue/30 p-5 shadow-sm">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-ocean-blue/15 flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-ocean-blue" />
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-ocean-blue font-bold">Disponibilidad</p>
+                  <p className="text-lg font-semibold text-stone-gray">
+                    {tour.availability.days} · {tour.availability.timeSlot}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">

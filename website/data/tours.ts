@@ -27,6 +27,10 @@ export interface Tour {
   category: 'teide' | 'coastal' | 'adventure';
   featured: boolean;
   visible: boolean;
+  availability?: {
+    days: string;
+    timeSlot: string;
+  };
 }
 
 export const tours: Tour[] = [
@@ -242,7 +246,11 @@ export const tours: Tour[] = [
     },
     category: 'coastal',
     featured: true,
-    visible: false
+    visible: true,
+    availability: {
+      days: 'Martes y Jueves',
+      timeSlot: 'Solo por la mañana'
+    }
   }
 ];
 

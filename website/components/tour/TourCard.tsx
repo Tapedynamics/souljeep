@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Tour } from '@/data/tours';
 import Button from '@/components/ui/Button';
-import { Clock, Users, Euro } from 'lucide-react';
+import { Clock, Users, Euro, Calendar } from 'lucide-react';
 
 interface TourCardProps {
   tour: Tour;
@@ -70,6 +70,15 @@ export default function TourCard({ tour }: TourCardProps) {
         </div>
 
         <p className="text-stone-gray mb-4 line-clamp-2 text-sm">{description}</p>
+
+        {tour.availability && (
+          <div className="mb-4 flex items-start gap-2 rounded-lg bg-ocean-blue/5 border border-ocean-blue/20 px-3 py-2">
+            <Calendar className="w-4 h-4 text-ocean-blue flex-shrink-0 mt-0.5" />
+            <span className="text-xs font-semibold text-ocean-blue leading-tight">
+              {tour.availability.days} · {tour.availability.timeSlot}
+            </span>
+          </div>
+        )}
 
         {/* Highlights */}
         <div className="mb-4">
